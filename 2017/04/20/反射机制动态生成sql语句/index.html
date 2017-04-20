@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="bean包下1.User.java  package bean; import util.TableFieldAnno; import util.TableNameAnno;  /**  * 所有用户信息  *   * @author LOOK  *   */ @TableNameAnno(&amp;quot;user&amp;quot;) public class User {     @TableFieldA">
+<meta name="description" content="本例用于熟悉反射机制，代码很简单，水平有限，个人的一些理解都加在注释中了。 bean包下1.User.java1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374 packa">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="反射机制动态生成sql语句">
 <meta property="og:url" content="http://yoursite.com/2017/04/20/反射机制动态生成sql语句/index.html">
 <meta property="og:site_name" content="look的博客">
-<meta property="og:description" content="bean包下1.User.java  package bean; import util.TableFieldAnno; import util.TableNameAnno;  /**  * 所有用户信息  *   * @author LOOK  *   */ @TableNameAnno(&amp;quot;user&amp;quot;) public class User {     @TableFieldA">
-<meta property="og:updated_time" content="2017-04-20T11:55:02.944Z">
+<meta property="og:description" content="本例用于熟悉反射机制，代码很简单，水平有限，个人的一些理解都加在注释中了。 bean包下1.User.java1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374 packa">
+<meta property="og:updated_time" content="2017-04-20T14:17:50.150Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="反射机制动态生成sql语句">
-<meta name="twitter:description" content="bean包下1.User.java  package bean; import util.TableFieldAnno; import util.TableNameAnno;  /**  * 所有用户信息  *   * @author LOOK  *   */ @TableNameAnno(&amp;quot;user&amp;quot;) public class User {     @TableFieldA">
+<meta name="twitter:description" content="本例用于熟悉反射机制，代码很简单，水平有限，个人的一些理解都加在注释中了。 bean包下1.User.java1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374 packa">
 
 
 
@@ -286,7 +286,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-20T19:58:29+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-20T22:17:50+08:00">
                 2017-04-20
               </time>
             
@@ -322,177 +322,11 @@
       
 
       
-        <h2 id="bean包下"><a href="#bean包下" class="headerlink" title="bean包下"></a>bean包下</h2><h3 id="1-User-java"><a href="#1-User-java" class="headerlink" title="1.User.java"></a>1.User.java</h3><!-- lang:java -->
-<pre><code> package bean;
-import util.TableFieldAnno;
-import util.TableNameAnno;
-
-/**
- * 所有用户信息
- * 
- * @author LOOK
- * 
- */
-@TableNameAnno(&quot;user&quot;)
-public class User {
-    @TableFieldAnno(field = &quot;user_id&quot;, primaryKey = true, defaultNull = false)
-    private String user_id;// 学号
-    @TableFieldAnno(field = &quot;user_name&quot;)
-    private String user_name;// 姓名
-    @TableFieldAnno(field = &quot;user_tel&quot;)
-    private String user_tel;// 联系方式
-    @TableFieldAnno(field = &quot;user_type&quot;)
-    private String user_type;// 身份类型
-    @TableFieldAnno(field = &quot;user_pw&quot;)
-    private String user_pw;// 密码
-    @TableFieldAnno(field = &quot;user_isGraduate&quot;)
-    private Boolean isGraduate;// 是否毕业
-
-public String getUser_id() {
-    return user_id;
-}
-
-public void setUser_id(String user_id) {
-    this.user_id = user_id;
-}
-
-public String getUser_name() {
-    return user_name;
-}
-
-public void setUser_name(String user_name) {
-    this.user_name = user_name;
-}
-
-public String getUser_tel() {
-    return user_tel;
-}
-
-public void setUser_tel(String user_tel) {
-    this.user_tel = user_tel;
-}
-
-public String getUser_type() {
-    return user_type;
-}
-
-public void setUser_type(String user_type) {
-    this.user_type = user_type;
-}
-
-public String getUser_pw() {
-    return user_pw;
-}
-
-public void setUser_pw(String user_pw) {
-    this.user_pw = user_pw;
-}
-
-public Boolean getIsGraduate() {
-    return isGraduate;
-}
-
-public void setIsGraduate(Boolean isGraduate) {
-    this.isGraduate = isGraduate;
-}
-
-}
-</code></pre><p>`</p>
-<h2 id="util包下"><a href="#util包下" class="headerlink" title="util包下"></a>util包下</h2><h3 id="1-TableNameAnno-java"><a href="#1-TableNameAnno-java" class="headerlink" title="1.TableNameAnno .java"></a>1.TableNameAnno .java</h3><!-- lang:java -->
-<pre><code>package util;
-
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
-/**
- * 用于注解表名
- * @author LOOK
- *
- */
-@Target(value = ElementType.TYPE)
-@Retention(RetentionPolicy.RUNTIME)
-public @interface TableNameAnno {
-    String value();
-}
-</code></pre><h3 id="2-TableFieldAnno"><a href="#2-TableFieldAnno" class="headerlink" title="2.TableFieldAnno"></a>2.TableFieldAnno</h3><!-- lang:java -->
-<pre><code>package util;
-
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
-
-/**
- * 用于注解类字段的属性
- * 
- * @author LOOK
- * 
- */
-@Target(value = ElementType.FIELD)
-@Retention(RetentionPolicy.RUNTIME)
-public @interface TableFieldAnno {
-String field();// 字段名称
-
-boolean primaryKey() default false;// 是否是主键
-
-String type() default &quot;varchar&quot;;// 类型
-
-int length() default 30;
-
-boolean defaultNull() default true;
-}
-</code></pre><h3 id="3-TestSqlByAnno-java"><a href="#3-TestSqlByAnno-java" class="headerlink" title="3.TestSqlByAnno.java"></a>3.TestSqlByAnno.java</h3><!-- lang:java -->
-<pre><code>package util;
-
-import java.lang.reflect.Field;
-
-@SuppressWarnings(&quot;all&quot;)
-public class TestSqlByAnno {
-public static void main(String[] args) {
-    createSql(&quot;User&quot;);
-}
-
-/**
- * 用于动态生成建表语句
- * 
- * @param type
- */
-public static void createSql(String type) {// 传入类名
-    try {
-        Class clazz = Class.forName(&quot;bean.&quot; + type);
-        // 获取类的注解
-        TableNameAnno tableNameAnno = (TableNameAnno) clazz
-                .getAnnotation(TableNameAnno.class);
-        System.out.println(&quot;create table &quot; + tableNameAnno.value() + &quot;(&quot;);
-        // 获取所有属性的注解，输出属性注解的属性
-        Field[] fields = clazz.getDeclaredFields();
-        TableFieldAnno tableFieldAnno=null;
-        for (int i = 0; i &lt; fields.length; i++) {
-            //获取每个属性的注解
-            tableFieldAnno = fields[i]
-                    .getAnnotation(TableFieldAnno.class);
-            //输出每个注解的属性
-            System.out.print(tableFieldAnno.field() + &quot; &quot;
-                    + tableFieldAnno.type() + &quot; (&quot;
-                    + tableFieldAnno.length() + &quot;) &quot;);
-            if (tableFieldAnno.primaryKey()) {// 主键
-                System.out.println(&quot;primary key,&quot;);
-            } else if (i == fields.length - 1) {// 最后一行
-                System.out.println(&quot;not null &quot;);
-            } else {// 其他行
-                System.out.println(&quot;not null, &quot;);
-            }
-
-        }
-        System.out.println(&quot;) default charset=&apos;utf8&apos;;&quot;);
-    } catch (ClassNotFoundException e) {
-        e.printStackTrace();
-    }
-
-}
-}
-</code></pre><p>`</p>
+        <p>本例用于熟悉反射机制，代码很简单，水平有限，个人的一些理解都加在注释中了。</p>
+<h2 id="bean包下"><a href="#bean包下" class="headerlink" title="bean包下"></a>bean包下</h2><h3 id="1-User-java"><a href="#1-User-java" class="headerlink" title="1.User.java"></a>1.User.java</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div></pre></td><td class="code"><pre><div class="line"> <span class="keyword">package</span> bean;</div><div class="line">   <span class="keyword">import</span> util.TableFieldAnno;</div><div class="line">   <span class="keyword">import</span> util.TableNameAnno;</div><div class="line"></div><div class="line">   <span class="comment">/**</span></div><div class="line">    * 所有用户信息</div><div class="line">    * </div><div class="line">    * <span class="doctag">@author</span> LOOK</div><div class="line">    * </div><div class="line">    */</div><div class="line"><span class="meta">@TableNameAnno</span>(<span class="string">"user"</span>)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</div><div class="line">	<span class="meta">@TableFieldAnno</span>(field = <span class="string">"user_id"</span>, primaryKey = <span class="keyword">true</span>, defaultNull = <span class="keyword">false</span>)</div><div class="line">	<span class="keyword">private</span> String user_id;<span class="comment">// 学号</span></div><div class="line">	<span class="meta">@TableFieldAnno</span>(field = <span class="string">"user_name"</span>)</div><div class="line">	<span class="keyword">private</span> String user_name;<span class="comment">// 姓名</span></div><div class="line">	<span class="meta">@TableFieldAnno</span>(field = <span class="string">"user_tel"</span>)</div><div class="line">	<span class="keyword">private</span> String user_tel;<span class="comment">// 联系方式</span></div><div class="line">	<span class="meta">@TableFieldAnno</span>(field = <span class="string">"user_type"</span>)</div><div class="line">	<span class="keyword">private</span> String user_type;<span class="comment">// 身份类型</span></div><div class="line">	<span class="meta">@TableFieldAnno</span>(field = <span class="string">"user_pw"</span>)</div><div class="line">	<span class="keyword">private</span> String user_pw;<span class="comment">// 密码</span></div><div class="line">	<span class="meta">@TableFieldAnno</span>(field = <span class="string">"user_isGraduate"</span>)</div><div class="line">	<span class="keyword">private</span> Boolean isGraduate;<span class="comment">// 是否毕业</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getUser_id</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="keyword">return</span> user_id;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUser_id</span><span class="params">(String user_id)</span> </span>&#123;</div><div class="line">	<span class="keyword">this</span>.user_id = user_id;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getUser_name</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="keyword">return</span> user_name;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUser_name</span><span class="params">(String user_name)</span> </span>&#123;</div><div class="line">	<span class="keyword">this</span>.user_name = user_name;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getUser_tel</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="keyword">return</span> user_tel;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUser_tel</span><span class="params">(String user_tel)</span> </span>&#123;</div><div class="line">	<span class="keyword">this</span>.user_tel = user_tel;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getUser_type</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="keyword">return</span> user_type;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUser_type</span><span class="params">(String user_type)</span> </span>&#123;</div><div class="line">	<span class="keyword">this</span>.user_type = user_type;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getUser_pw</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="keyword">return</span> user_pw;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUser_pw</span><span class="params">(String user_pw)</span> </span>&#123;</div><div class="line">	<span class="keyword">this</span>.user_pw = user_pw;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> Boolean <span class="title">getIsGraduate</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="keyword">return</span> isGraduate;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setIsGraduate</span><span class="params">(Boolean isGraduate)</span> </span>&#123;</div><div class="line">	<span class="keyword">this</span>.isGraduate = isGraduate;</div><div class="line">&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="util包下"><a href="#util包下" class="headerlink" title="util包下"></a>util包下</h2><h3 id="TableNameAnno-java"><a href="#TableNameAnno-java" class="headerlink" title="TableNameAnno .java"></a>TableNameAnno .java</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> util;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.lang.annotation.ElementType;</div><div class="line"><span class="keyword">import</span> java.lang.annotation.Retention;</div><div class="line"><span class="keyword">import</span> java.lang.annotation.RetentionPolicy;</div><div class="line"><span class="keyword">import</span> java.lang.annotation.Target;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * 用于注解表名</div><div class="line"> * <span class="doctag">@author</span> LOOK</div><div class="line"> *</div><div class="line"> */</div><div class="line"><span class="meta">@Target</span>(value = ElementType.TYPE)</div><div class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</div><div class="line"><span class="keyword">public</span> <span class="meta">@interface</span> TableNameAnno &#123;</div><div class="line">	<span class="function">String <span class="title">value</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="TableFieldAnno"><a href="#TableFieldAnno" class="headerlink" title="TableFieldAnno"></a>TableFieldAnno</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> util;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.lang.annotation.ElementType;</div><div class="line"><span class="keyword">import</span> java.lang.annotation.Retention;</div><div class="line"><span class="keyword">import</span> java.lang.annotation.RetentionPolicy;</div><div class="line"><span class="keyword">import</span> java.lang.annotation.Target;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * 用于注解类字段的属性</div><div class="line"> * </div><div class="line"> * <span class="doctag">@author</span> LOOK</div><div class="line"> * </div><div class="line"> */</div><div class="line"><span class="meta">@Target</span>(value = ElementType.FIELD)</div><div class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</div><div class="line"><span class="keyword">public</span> <span class="meta">@interface</span> TableFieldAnno &#123;</div><div class="line"><span class="function">String <span class="title">field</span><span class="params">()</span></span>;<span class="comment">// 字段名称</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">primaryKey</span><span class="params">()</span> <span class="keyword">default</span> <span class="keyword">false</span></span>;<span class="comment">// 是否是主键</span></div><div class="line"></div><div class="line"><span class="function">String <span class="title">type</span><span class="params">()</span> <span class="keyword">default</span> "varchar"</span>;<span class="comment">// 类型</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">length</span><span class="params">()</span> <span class="keyword">default</span> 30</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">defaultNull</span><span class="params">()</span> <span class="keyword">default</span> <span class="keyword">true</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="TestSqlByAnno-java"><a href="#TestSqlByAnno-java" class="headerlink" title="TestSqlByAnno.java"></a>TestSqlByAnno.java</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> util;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.lang.reflect.Field;</div><div class="line"></div><div class="line"><span class="meta">@SuppressWarnings</span>(<span class="string">"all"</span>)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestSqlByAnno</span> </span>&#123;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">	createSql(<span class="string">"User"</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * 用于动态生成建表语句</div><div class="line"> * </div><div class="line"> * <span class="doctag">@param</span> type</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">createSql</span><span class="params">(String type)</span> </span>&#123;<span class="comment">// 传入类名</span></div><div class="line">	<span class="keyword">try</span> &#123;</div><div class="line">		Class clazz = Class.forName(<span class="string">"bean."</span> + type);</div><div class="line">		<span class="comment">// 获取类的注解</span></div><div class="line">		TableNameAnno tableNameAnno = (TableNameAnno) clazz</div><div class="line">				.getAnnotation(TableNameAnno.class);</div><div class="line">		System.out.println(<span class="string">"create table "</span> + tableNameAnno.value() + <span class="string">"("</span>);</div><div class="line">		<span class="comment">// 获取所有属性的注解，输出属性注解的属性</span></div><div class="line">		Field[] fields = clazz.getDeclaredFields();</div><div class="line">		TableFieldAnno tableFieldAnno=<span class="keyword">null</span>;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; fields.length; i++) &#123;</div><div class="line">			<span class="comment">//获取每个属性的注解</span></div><div class="line">			tableFieldAnno = fields[i]</div><div class="line">					.getAnnotation(TableFieldAnno.class);</div><div class="line">			<span class="comment">//输出每个注解的属性</span></div><div class="line">			System.out.print(tableFieldAnno.field() + <span class="string">" "</span></div><div class="line">					+ tableFieldAnno.type() + <span class="string">" ("</span></div><div class="line">					+ tableFieldAnno.length() + <span class="string">") "</span>);</div><div class="line">			<span class="keyword">if</span> (tableFieldAnno.primaryKey()) &#123;<span class="comment">// 主键</span></div><div class="line">				System.out.println(<span class="string">"primary key,"</span>);</div><div class="line">			&#125; <span class="keyword">else</span> <span class="keyword">if</span> (i == fields.length - <span class="number">1</span>) &#123;<span class="comment">// 最后一行</span></div><div class="line">				System.out.println(<span class="string">"not null "</span>);</div><div class="line">			&#125; <span class="keyword">else</span> &#123;<span class="comment">// 其他行</span></div><div class="line">				System.out.println(<span class="string">"not null, "</span>);</div><div class="line">			&#125;</div><div class="line"></div><div class="line">		&#125;</div><div class="line">		System.out.println(<span class="string">") default charset='utf8';"</span>);</div><div class="line">	&#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</div><div class="line">		e.printStackTrace();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -529,18 +363,14 @@ public static void createSql(String type) {// 传入类名
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/20/解决表单post传递乱码/" rel="next" title="解决表单post传递乱码">
-                <i class="fa fa-chevron-left"></i> 解决表单post传递乱码
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/20/ubuntu下编程环境的搭建/" rel="prev" title="ubuntu下编程环境的搭建">
-                ubuntu下编程环境的搭建 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/20/解决表单post传递乱码/" rel="prev" title="解决表单post传递乱码">
+                解决表单post传递乱码 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -659,7 +489,7 @@ public static void createSql(String type) {// 传入类名
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#bean包下"><span class="nav-number">1.</span> <span class="nav-text">bean包下</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-User-java"><span class="nav-number">1.1.</span> <span class="nav-text">1.User.java</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#util包下"><span class="nav-number">2.</span> <span class="nav-text">util包下</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-TableNameAnno-java"><span class="nav-number">2.1.</span> <span class="nav-text">1.TableNameAnno .java</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-TableFieldAnno"><span class="nav-number">2.2.</span> <span class="nav-text">2.TableFieldAnno</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-TestSqlByAnno-java"><span class="nav-number">2.3.</span> <span class="nav-text">3.TestSqlByAnno.java</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#bean包下"><span class="nav-number">1.</span> <span class="nav-text">bean包下</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-User-java"><span class="nav-number">1.1.</span> <span class="nav-text">1.User.java</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#util包下"><span class="nav-number">2.</span> <span class="nav-text">util包下</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#TableNameAnno-java"><span class="nav-number">2.1.</span> <span class="nav-text">TableNameAnno .java</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TableFieldAnno"><span class="nav-number">2.2.</span> <span class="nav-text">TableFieldAnno</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TestSqlByAnno-java"><span class="nav-number">2.3.</span> <span class="nav-text">TestSqlByAnno.java</span></a></li></ol></li></ol></div>
             
 
           </div>
