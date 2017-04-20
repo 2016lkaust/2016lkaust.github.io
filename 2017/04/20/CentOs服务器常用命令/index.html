@@ -1,0 +1,895 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="linux备忘," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="12345678命令列表------ps------kill------查看端口是否被占用------tomcat相关------mysql相关------postgreSQL相关------防火墙相关 首先要进入root用户  su  ps查看某端口是否被占用(如查看8088）  ps -ef|grep 8088  显示java相关程序  ps aux|grep java  killkill命令">
+<meta name="keywords" content="linux备忘">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Centos服务器常用命令">
+<meta property="og:url" content="http://yoursite.com/2017/04/20/CentOs服务器常用命令/index.html">
+<meta property="og:site_name" content="look的博客">
+<meta property="og:description" content="12345678命令列表------ps------kill------查看端口是否被占用------tomcat相关------mysql相关------postgreSQL相关------防火墙相关 首先要进入root用户  su  ps查看某端口是否被占用(如查看8088）  ps -ef|grep 8088  显示java相关程序  ps aux|grep java  killkill命令">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1837782-8b4c29d48645f4e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1837782-ff6376cd592a8a5d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1837782-7d1a96228fbe6ba0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1837782-275cea19c66876b6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-04-20T11:36:48.294Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Centos服务器常用命令">
+<meta name="twitter:description" content="12345678命令列表------ps------kill------查看端口是否被占用------tomcat相关------mysql相关------postgreSQL相关------防火墙相关 首先要进入root用户  su  ps查看某端口是否被占用(如查看8088）  ps -ef|grep 8088  显示java相关程序  ps aux|grep java  killkill命令">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1837782-8b4c29d48645f4e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/04/20/CentOs服务器常用命令/"/>
+
+
+
+
+
+  <title> Centos服务器常用命令 | look的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">look的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/20/CentOs服务器常用命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="look">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="look的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Centos服务器常用命令
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-20T19:58:29+08:00">
+                2017-04-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">命令列表</div><div class="line">------ps</div><div class="line">------kill</div><div class="line">------查看端口是否被占用</div><div class="line">------tomcat相关</div><div class="line">------mysql相关</div><div class="line">------postgreSQL相关</div><div class="line">------防火墙相关</div></pre></td></tr></table></figure>
+<p>首先要进入root用户</p>
+<blockquote>
+<p>su</p>
+</blockquote>
+<h1 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h1><p>查看某端口是否被占用(如查看8088）</p>
+<blockquote>
+<p>ps -ef|grep 8088</p>
+</blockquote>
+<p>显示java相关程序</p>
+<blockquote>
+<p>ps aux|grep java</p>
+</blockquote>
+<h1 id="kill"><a href="#kill" class="headerlink" title="kill"></a>kill</h1><p>kill命令用于关闭指定进程。</p>
+<p>格式：</p>
+<p>kill 参数 信号 进程ID</p>
+<p>参数：</p>
+<p>-s 指定发送信号</p>
+<p>-l 根据信号名显示信号编号，若果不加信号的编号参数，则使用“-l”参数会列出全部的信号名称</p>
+<p>-a 当处理当前进程时，不限制命令名和进程号的对应关系</p>
+<p>-p 指定kill 命令只打印相关进程的进程号，而不发送任何信号</p>
+<p>-u 指定用户<br>信号：</p>
+<p>信号名 信号编号 信号含义</p>
+<p>HUP 1 终端断线</p>
+<p>INT 2 中断</p>
+<p>QUIT 3 退出</p>
+<p>TERM 15 终止</p>
+<p>KILL 9 强制终止</p>
+<p>CONT 18 继续（与STOP相反）</p>
+<p>STOP 19 暂停（</p>
+<p>示例：</p>
+<p>显示信号KILL的信号编号</p>
+<p>kill -l KILL</p>
+<p>关闭apache用户下所有进程</p>
+<p>kill -u apache.apache</p>
+<p>强制关闭进程ID为1937的进程，参数s可以省略。</p>
+<p>kill -s 9 1937</p>
+<p>kill -9 1937</p>
+<h1 id="查看端口是否被占用"><a href="#查看端口是否被占用" class="headerlink" title="查看端口是否被占用"></a>查看端口是否被占用</h1><p><a href="http://www.cnblogs.com/ggjucheng/archive/2012/01/08/2316661.html" target="_blank" rel="external">参考文章</a></p>
+<h3 id="1-显示所有端口和所有对应的程序"><a href="#1-显示所有端口和所有对应的程序" class="headerlink" title="1.显示所有端口和所有对应的程序"></a>1.显示所有端口和所有对应的程序</h3><blockquote>
+<p>netstat -tunlp</p>
+</blockquote>
+<h3 id="2-用grep管道可以过滤出想要的关键字段。"><a href="#2-用grep管道可以过滤出想要的关键字段。" class="headerlink" title="2.用grep管道可以过滤出想要的关键字段。"></a>2.用grep管道可以过滤出想要的关键字段。</h3><blockquote>
+<p>netstat -tunlp |grep 5432</p>
+</blockquote>
+<p><em>参数</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">-a (all)显示所有选项，默认不显示LISTEN相关</div><div class="line">-t (tcp)仅显示tcp相关选项</div><div class="line">-u (udp)仅显示udp相关选项</div><div class="line">-n 拒绝显示别名，能显示数字的全部转化成数字。</div><div class="line">-l 仅列出有在 Listen (监听) 的服務状态</div><div class="line"></div><div class="line">-p 显示建立相关链接的程序名</div><div class="line">-r 显示路由信息，路由表</div><div class="line">-e 显示扩展信息，例如uid等</div><div class="line">-s 按各个协议进行统计</div><div class="line">-c 每隔一个固定时间，执行该netstat命令。</div></pre></td></tr></table></figure></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1837782-8b4c29d48645f4e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="测试"></p>
+<h3 id="3-查看某一端口的占用情况："><a href="#3-查看某一端口的占用情况：" class="headerlink" title="3.查看某一端口的占用情况："></a>3.查看某一端口的占用情况：</h3><blockquote>
+<p>lsof -i:端口号</p>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/1837782-ff6376cd592a8a5d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="测试"></p>
+<h1 id="tomcat"><a href="#tomcat" class="headerlink" title="tomcat"></a>tomcat</h1><p>修改端口为8088端口。<br><code>tomcat7/conf/server.xml</code> 文件里的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;Connector port=&quot;8080&quot; </div><div class="line">protocol=&quot;HTTP/1.1&quot;  connectionTimeout=&quot;20000&quot;  redirectPort=&quot;8443&quot; /&gt;</div></pre></td></tr></table></figure></p>
+<p>将<code>port=&quot;8080&quot;</code>改为<code>port=&quot;8088&quot;</code>，保存。<br><strong> 如果想要添加远程访问的话，需要修改防火墙设置。修改方法参看下面防火墙部分</strong><br><code>-A INPUT -m state --state NEW -M tcp -p tcp --dport 8088 -j ACCEPT#开放tomcat端口</code></p>
+<p><strong>安装好后的启动和关闭方式：</strong></p>
+<blockquote>
+<p>sh /opt/apache-tomcat-8.0.23/bin/startup.sh<br>sh /opt/apache-tomcat-8.0.23/bin/shutdown.sh</p>
+</blockquote>
+<p>可以看出，路径太长，不好启动，所以将其设置成<strong>以服务方式启动</strong>，以后再启动就用⑥中的方式操作。<br>①. 在/etc/init.d目录下新建文件，命名为tomcat2. 对tomcat文件进行编辑，执行</p>
+<blockquote>
+<p>  cd /etc/init.d/<br> vi tomcat</p>
+</blockquote>
+<p>将下面代码粘上去<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line"># description: Tomcat7 Start Stop Restart</div><div class="line"># processname: tomcat7</div><div class="line"># chkconfig: 234 20 80</div><div class="line"># JAVA_HOME要根据jdk的具体位置修改</div><div class="line"></div><div class="line">JAVA_HOME=/opt/jdk1.7.0_80</div><div class="line">export JAVA_HOME</div><div class="line">PATH=$JAVA_HOME/bin:$PATH</div><div class="line">export PATH</div><div class="line">CATALINA_HOME=/opt/apache-tomcat-8.0.23</div><div class="line">case $1 in</div><div class="line">start)</div><div class="line">sh $CATALINA_HOME/bin/startup.sh</div><div class="line">;;</div><div class="line">stop)</div><div class="line">sh $CATALINA_HOME/bin/shutdown.sh</div><div class="line">;;</div><div class="line">restart)</div><div class="line">sh $CATALINA_HOME/bin/shutdown.sh</div><div class="line">sh $CATALINA_HOME/bin/startup.sh</div><div class="line">;;</div><div class="line">esac</div><div class="line">exit 0</div></pre></td></tr></table></figure></p>
+<p>②. 按ESC退出，并</p>
+<blockquote>
+<p>：wq</p>
+</blockquote>
+<p>③. 设置tomcat的文件属性，把tomcat 修改为可运行的文件，命令参考如下</p>
+<blockquote>
+<p>chmod a+x tomcat</p>
+</blockquote>
+<p>④. 添加服务</p>
+<blockquote>
+<p>chkconfig –add tomcat</p>
+</blockquote>
+<p>⑤. 服务就添加成功了<br>然后用 chkconfig –list 查看，在服务列表里就会出现自定义的服务了</p>
+<blockquote>
+<p> chkconfig –list</p>
+</blockquote>
+<p>⑥. 测试</p>
+<blockquote>
+<p>service tomcat start<br>service tomcat stop<br>service tomcat restart<br>service tomcat status</p>
+</blockquote>
+<h1 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h1><p>安装后需要更改初始密码（初始密码很复杂）</p>
+<blockquote>
+<p>grep ‘temporary password’ /var/log/mysqld.log</p>
+</blockquote>
+<p>看到密码后进入mysql修改密码</p>
+<blockquote>
+<p>mysql -uroot -p（回车后输入密码）</p>
+</blockquote>
+<p>进入后修改密码为123456</p>
+<blockquote>
+<p>mysql&gt; ALTER USER ‘root’@’localhost’ IDENTIFIED BY ‘123456’;</p>
+</blockquote>
+<p>默认只允许root帐户在本地登录，如果要在其它机器上连接mysql，必须修改root允许远程连接，或者添加一个允许远程连接的帐户，为了安全起见，添加一个新的帐户：</p>
+<blockquote>
+<p>mysql&gt; GRANT ALL PRIVILEGES ON <em>.</em> TO ‘look’@’%’ IDENTIFIED BY ‘123456’ WITH GRANT OPTION;</p>
+</blockquote>
+<p>修改防火墙设置（<em>参照“防火墙-更改防火墙配置”部分</em>）<br><code>-A INPUT -m state --state NEW -M tcp -p tcp --dport 3306 -j ACCEPT#开放mysql端口</code><br>启动mysql</p>
+<blockquote>
+<p>systemctl start mysqld</p>
+</blockquote>
+<p>或者</p>
+<blockquote>
+<p> service mysqld start</p>
+</blockquote>
+<p>关闭mysql</p>
+<blockquote>
+<p>systemctl stop mysqld</p>
+</blockquote>
+<p>或者</p>
+<blockquote>
+<p> service mysqld stop</p>
+</blockquote>
+<p>常用sql语句<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">进入</div><div class="line">mysql -u root -p</div><div class="line">创建数据库</div><div class="line">create database test;</div><div class="line">use test;</div><div class="line">create table a(</div><div class="line">id int(4) not null,</div><div class="line">name varchar(10),</div><div class="line">primary ker(id)</div><div class="line">) default charset=utf8;</div></pre></td></tr></table></figure></p>
+<h1 id="postgreSQL"><a href="#postgreSQL" class="headerlink" title="postgreSQL"></a>postgreSQL</h1><p><strong>常用命令</strong><br>启动</p>
+<blockquote>
+<p>systemctl start postgresql-9.5.service</p>
+</blockquote>
+<p>登录</p>
+<blockquote>
+<p>su - postgres<br>psql -U postgres</p>
+</blockquote>
+<p>安装过程<br>1.添加RPM    </p>
+<blockquote>
+<p>yum install <a href="https://download.postgresql.org/pub/repos/yum/9.5/redhat/rhel-7-x86_64/pgdg-centos95-9.5-2.noarch.rpm" target="_blank" rel="external">https://download.postgresql.org/pub/repos/yum/9.5/redhat/rhel-7-x86_64/pgdg-centos95-9.5-2.noarch.rpm</a></p>
+</blockquote>
+<p>2.安装PostgreSQL 9.5    </p>
+<blockquote>
+<p>yum install postgresql95-server postgresql95-contrib</p>
+</blockquote>
+<p>3.初始化数据库   </p>
+<blockquote>
+<p> /usr/pgsql-9.5/bin/postgresql95-setup initdb</p>
+</blockquote>
+<p>4.设置开机自启动(有时候没反应，但是继续向下还是可以进行)    </p>
+<blockquote>
+<p>systemctl enable postgresql-9.5.service</p>
+</blockquote>
+<p><strong>5.启动服务    </strong></p>
+<blockquote>
+<p>systemctl start postgresql-9.5.service</p>
+</blockquote>
+<p>6.修改用户密码<br>切换用户，执行后提示符会变为 ‘-bash-4.2$’ </p>
+<blockquote>
+<p>su - postgres  </p>
+</blockquote>
+<p>登录数据库</p>
+<blockquote>
+<p>psql -U postgres</p>
+</blockquote>
+<p>输入 <code>ALTER USER postgres WITH PASSWORD &#39;123456&#39;</code>，设置用户<code>postgres</code>密码 <code>123456</code>  ，\q  退出数据库</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1837782-7d1a96228fbe6ba0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>7.开启远程访问   </p>
+<blockquote>
+<p>vi /var/lib/pgsql/9.5/data/postgresql.conf    </p>
+</blockquote>
+<p>修改<code>#listen_addresses = &#39;localhost&#39;</code>为 <code>listen_addresses=&#39;*&#39;</code> 当然，此处‘*’也可以改为任何你想开放的服务器IP</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1837782-275cea19c66876b6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>8.信任远程连接   </p>
+<blockquote>
+<p>vi /var/lib/pgsql/9.5/data/pg_hba.conf    </p>
+</blockquote>
+<p>修改如下内容，信任指定服务器连接<br><code># IPv4 local connections:</code><br><code>host    all            all      127.0.0.1/32      trust</code><br><code>host    all            all      192.168.1.155/32  trust</code></p>
+<p><strong>注：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">192.168.1.155是指定这个ip可以连接到postgreSQL</div><div class="line">     32 -&gt; 192.168.1.155/32 表示必须是来自这个IP地址的访问才合法；</div><div class="line">     24 -&gt; 192.168.1.0/24 表示只要来自192.168.1.0 ~ 192.168.1.255的都合法；</div><div class="line">     16 -&gt; 192.168.0.0/16 表示只要来自192.168.0.0 ~ 192.168.255.255的都合法；</div><div class="line">     8   -&gt; 192.0.0.0/16 表示只要来自192.0.0.0 ~ 192.255.255.255的都合法；</div><div class="line">     0   -&gt; 0.0.0.0/0 表示全部IP地址都合法，/左边的IP地址随便了只要是合法的IP地址即可</div><div class="line"></div><div class="line">trust</div><div class="line">无条件地允许联接。这个方法允许任何可以与PostgreSQL 数据库服务器联接的用户以他们期望的任意 PostgreSQL 数据库用户身份进行联接，而不需要口令。</div><div class="line">reject</div><div class="line">联接无条件拒绝。常用于从一个组中&quot;过滤&quot;某些主机。</div><div class="line">md5</div><div class="line">要求客户端提供一个 MD5 加密的口令进行认证。</div><div class="line">crypt</div><div class="line">要求客户端提供一个 crypt() 加密的口令用于认证。 7.2 以前的客户端只能支持 crypt。 对于 7.2 以及以后的客户端，我们建议使用 md5。</div><div class="line">password</div><div class="line">要求客户端提供一个未加密的口令进行认证。 因为口令是以明文形式在网络上传递的， 所以我们不应该在不安全的网络上使用这个方式。</div><div class="line">krb4</div><div class="line">用 Kerberos V4 认证用户。只有在进行 TCP/IP 联接的时候才能用。  （译注：Kerberos，&quot;克尔波洛斯&quot;，故希腊神话冥王哈得斯的多头看门狗。 Kerberos 是 MIT 开发出来的基与对称加密算法的认证协议和/或密钥交换方法。 其特点是需要两个不同用途的服务器，一个用于认证身份， 一个用于通道两端用户的密钥交换。同时 Kerberos 对网络时间同步要求比较高，以防止回放攻击，因此通常伴随 NTP 服务。）</div><div class="line">krb5</div><div class="line">用 Kerberos V5 认证用户。只有在进行 TCP/IP 联接的时候才能用。  （译注：Kerberos V5 是上面 V4 的改良，主要是不再依赖 DES 算法， 同时增加了一些新特性。）</div><div class="line">ident</div><div class="line">获取客户的操作系统名（对于 TCP/IP 联接，用户的身份是通过与运行在客户端上的 ident 服务器联接进行判断的，对于本地联接，它是从操作系统获取的。） 然后检查一下，看看用户是否允许以要求的数据库用户进行联接， 方法是参照在 ident 关键字后面声明的映射。 </div><div class="line">pam</div><div class="line">使用操作系统提供的可插入的认证模块服务 （Pluggable Authentication Modules） （PAM）来认证。</div></pre></td></tr></table></figure></p>
+<p>远程连接配置完成，由于系统原因，还需要在防火墙中打开相应的端口。<br>9.修改防火墙配置，加上（<em>参照“防火墙-更改防火墙配置”部分</em>）<br><code>-A INPUT -m state --state NEW -M tcp -p tcp --dport 5432 -j ACCEPT#开放postgreSQL端口</code></p>
+<p><strong>10. 重启PostgreSQL数据服务    </strong></p>
+<blockquote>
+<p>systemctl restart postgresql-9.5.service</p>
+</blockquote>
+<h1 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h1><p>查询防火墙状态:</p>
+<blockquote>
+<p>[root@localhost ~]# service   iptables status&lt;回车&gt;</p>
+</blockquote>
+<p>停止防火墙:</p>
+<blockquote>
+<p>[root@localhost ~]# service   iptables stop &lt;回车&gt;</p>
+</blockquote>
+<p>启动防火墙:</p>
+<blockquote>
+<p>[root@localhost ~]# service   iptables start &lt;回车&gt;</p>
+</blockquote>
+<p>重启防火墙:</p>
+<blockquote>
+<p>[root@localhost ~]# service   iptables restart &lt;回车&gt;</p>
+</blockquote>
+<p>永久关闭防火墙:</p>
+<blockquote>
+<p>[root@localhost ~]# chkconfig   iptables off&lt;回车&gt;</p>
+</blockquote>
+<p>永久关闭后启用:</p>
+<blockquote>
+<p>[root@localhost ~]# chkconfig   iptables on&lt;回车&gt;</p>
+</blockquote>
+<p>更改防火墙配置</p>
+<blockquote>
+<p>vi /etc/sysconfig/iptables </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"># sample configuration for iptables service</div><div class="line"># you can edit this manually or use system-config-firewall</div><div class="line"># please do not ask us to add additional ports/services to this default configuration</div><div class="line">*filter</div><div class="line">:INPUT ACCEPT [0:0]</div><div class="line">:FORWARD ACCEPT [0:0]</div><div class="line">:OUTPUT ACCEPT [0:0]</div><div class="line">-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT</div><div class="line">-A INPUT -p icmp -j ACCEPT</div><div class="line">-A INPUT -i lo -j ACCEPT</div><div class="line">-A INPUT -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT</div><div class="line">-A INPUT -m state --state NEW -M tcp -p tcp --dport 8088 -j ACCEPT#开放tomcat端口</div><div class="line">-A INPUT -m state --state NEW -M tcp -p tcp --dport 3306 -j ACCEPT#开放mysql端口</div><div class="line">-A INPUT -m state --state NEW -M tcp -p tcp --dport 5432 -j ACCEPT#开放postgreSQL端口</div><div class="line">-A INPUT -j REJECT --reject-with icmp-host-prohibited</div><div class="line">-A FORWARD -j REJECT --reject-with icmp-host-prohibited</div><div class="line">COMMIT</div></pre></td></tr></table></figure>
+<p>#scp命令</p>
+<p>scp就是secure copy，一个在linux下用来进行远程拷贝文件的命令。</p>
+<p>有时我们需要获得远程服务器上的某个文件，该服务器既没有配置ftp服务器，也没有做共享，无法通过常规途径获得文件时，只需要通过简单的scp命令便可达到目的。</p>
+<h2 id="将本机文件复制到远程服务器上"><a href="#将本机文件复制到远程服务器上" class="headerlink" title="将本机文件复制到远程服务器上"></a>将本机文件复制到远程服务器上</h2><blockquote>
+<p>#scp /home/administrator/news.txt root@192.168.6.129:/etc/squid</p>
+</blockquote>
+<p>/home/administrator/      本地文件的绝对路径</p>
+<p>news.txt                          要复制到服务器上的本地文件</p>
+<p>root                                 通过root用户登录到远程服务器（也可以使用其他拥有同等权限的用户）</p>
+<p>192.168.6.129                远程服务器的ip地址（也可以使用域名或机器名）</p>
+<p>/etc/squid                       将本地文件复制到位于远程服务器上的路径</p>
+<h2 id="将远程服务器上的文件复制到本机"><a href="#将远程服务器上的文件复制到本机" class="headerlink" title="将远程服务器上的文件复制到本机"></a>将远程服务器上的文件复制到本机</h2><blockquote>
+<p>#scp remote@www.abc.com:/usr/local/sin.sh /home/administrator</p>
+</blockquote>
+<p>remote                       通过remote用户登录到远程服务器（也可以使用其他拥有同等权限的用户）</p>
+<p>www.abc.com              远程服务器的域名（当然也可以使用该服务器ip地址）</p>
+<p>/usr/local/sin.sh           欲复制到本机的位于远程服务器上的文件</p>
+<p>/home/administrator  将远程文件复制到本地的绝对路径</p>
+<p>注意两点：</p>
+<p>1.如果远程服务器防火墙有特殊限制，scp便要走特殊端口，具体用什么端口视情况而定，命令格式如下：</p>
+<blockquote>
+<p>#scp -p 4588 remote@www.abc.com:/usr/local/sin.sh /home/administrator</p>
+</blockquote>
+<p>2.使用scp要注意所使用的用户是否具有可读取远程服务器相应文件的权限。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/linux备忘/" rel="tag"># linux备忘</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/20/jsp传参方法小结/" rel="next" title="jsp传参方法小结">
+                <i class="fa fa-chevron-left"></i> jsp传参方法小结
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/20/系统安装之路一准备篇/" rel="prev" title="系统安装之路一准备篇">
+                系统安装之路一准备篇 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/head.jpg"
+               alt="look" />
+          <p class="site-author-name" itemprop="name">look</p>
+           
+              <p class="site-description motion-element" itemprop="description">师傅领进门，修行在个人</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ps"><span class="nav-number">1.</span> <span class="nav-text">ps</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#kill"><span class="nav-number">2.</span> <span class="nav-text">kill</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看端口是否被占用"><span class="nav-number">3.</span> <span class="nav-text">查看端口是否被占用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-显示所有端口和所有对应的程序"><span class="nav-number">3.0.1.</span> <span class="nav-text">1.显示所有端口和所有对应的程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-用grep管道可以过滤出想要的关键字段。"><span class="nav-number">3.0.2.</span> <span class="nav-text">2.用grep管道可以过滤出想要的关键字段。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-查看某一端口的占用情况："><span class="nav-number">3.0.3.</span> <span class="nav-text">3.查看某一端口的占用情况：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tomcat"><span class="nav-number">4.</span> <span class="nav-text">tomcat</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mysql"><span class="nav-number">5.</span> <span class="nav-text">mysql</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#postgreSQL"><span class="nav-number">6.</span> <span class="nav-text">postgreSQL</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#防火墙"><span class="nav-number">7.</span> <span class="nav-text">防火墙</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#将本机文件复制到远程服务器上"><span class="nav-number">7.1.</span> <span class="nav-text">将本机文件复制到远程服务器上</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将远程服务器上的文件复制到本机"><span class="nav-number">7.2.</span> <span class="nav-text">将远程服务器上的文件复制到本机</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-look"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">look</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>

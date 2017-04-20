@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="折腾," />
+  <meta name="keywords" content="linux备忘," />
 
 
 
@@ -87,19 +87,19 @@
 
 
 
-<meta name="description" content="大一暑假，终于拥有了自己的第一台笔记本电脑。虽然价格不高，配置不高，但是作为第一台，还是把它当作宝贝一样供着，不敢乱动。直到半年后系统出现蓝屏故障，无奈找人做了系统。然而我并不喜欢总是依靠别人，从此以后，我的系统安装之路开启了。啰嗦了这么多，下面正式开始介绍。电脑能否开机，决定了使用哪种方法来安装系统更为合适。现在装系统并不复杂，很多傻瓜式一键装机系统镜像越来越受欢迎。 镜像分为两种，文件后缀分别">
-<meta name="keywords" content="折腾">
+<meta name="description" content="参考文章Ubuntu 16.04 U盘安装图文教程  问题   按照以上文章结束时，我的电脑提示无法将grub-efi-amd64-signed安装到/target/，重装好多次都是卡在这一步。解决之前的步骤中电脑会提示电脑是以UEFI启动什么的，不选在UEFI模式中运行，选择后退一项，也能正常安装。（当时没有截图，现在记不清了）  后续1.创建root用户 sudo passwd     更新系">
+<meta name="keywords" content="linux备忘">
 <meta property="og:type" content="article">
-<meta property="og:title" content="系统安装之路一准备篇">
-<meta property="og:url" content="http://yoursite.com/2017/04/20/系统安装之路一准备篇/index.html">
+<meta property="og:title" content="ubuntu安装及初始化">
+<meta property="og:url" content="http://yoursite.com/2016/11/01/ubuntu安装及初始化/index.html">
 <meta property="og:site_name" content="look的博客">
-<meta property="og:description" content="大一暑假，终于拥有了自己的第一台笔记本电脑。虽然价格不高，配置不高，但是作为第一台，还是把它当作宝贝一样供着，不敢乱动。直到半年后系统出现蓝屏故障，无奈找人做了系统。然而我并不喜欢总是依靠别人，从此以后，我的系统安装之路开启了。啰嗦了这么多，下面正式开始介绍。电脑能否开机，决定了使用哪种方法来安装系统更为合适。现在装系统并不复杂，很多傻瓜式一键装机系统镜像越来越受欢迎。 镜像分为两种，文件后缀分别">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1837782-74a812b54f4ff8ba?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-04-20T10:41:48.971Z">
+<meta property="og:description" content="参考文章Ubuntu 16.04 U盘安装图文教程  问题   按照以上文章结束时，我的电脑提示无法将grub-efi-amd64-signed安装到/target/，重装好多次都是卡在这一步。解决之前的步骤中电脑会提示电脑是以UEFI启动什么的，不选在UEFI模式中运行，选择后退一项，也能正常安装。（当时没有截图，现在记不清了）  后续1.创建root用户 sudo passwd     更新系">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1837782-2729c17d5a1914d9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-04-20T11:40:07.446Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="系统安装之路一准备篇">
-<meta name="twitter:description" content="大一暑假，终于拥有了自己的第一台笔记本电脑。虽然价格不高，配置不高，但是作为第一台，还是把它当作宝贝一样供着，不敢乱动。直到半年后系统出现蓝屏故障，无奈找人做了系统。然而我并不喜欢总是依靠别人，从此以后，我的系统安装之路开启了。啰嗦了这么多，下面正式开始介绍。电脑能否开机，决定了使用哪种方法来安装系统更为合适。现在装系统并不复杂，很多傻瓜式一键装机系统镜像越来越受欢迎。 镜像分为两种，文件后缀分别">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1837782-74a812b54f4ff8ba?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="ubuntu安装及初始化">
+<meta name="twitter:description" content="参考文章Ubuntu 16.04 U盘安装图文教程  问题   按照以上文章结束时，我的电脑提示无法将grub-efi-amd64-signed安装到/target/，重装好多次都是卡在这一步。解决之前的步骤中电脑会提示电脑是以UEFI启动什么的，不选在UEFI模式中运行，选择后退一项，也能正常安装。（当时没有截图，现在记不清了）  后续1.创建root用户 sudo passwd     更新系">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1837782-2729c17d5a1914d9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/20/系统安装之路一准备篇/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/11/01/ubuntu安装及初始化/"/>
 
 
 
 
 
-  <title> 系统安装之路一准备篇 | look的博客 </title>
+  <title> ubuntu安装及初始化 | look的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -252,7 +252,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/20/系统安装之路一准备篇/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/01/ubuntu安装及初始化/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="look">
@@ -273,7 +273,7 @@
             
             
               
-                系统安装之路一准备篇
+                ubuntu安装及初始化
               
             
           </h1>
@@ -288,8 +288,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-20T18:41:48+08:00">
-                2017-04-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-11-01T08:00:00+08:00">
+                2016-11-01
               </time>
             
 
@@ -324,14 +324,61 @@
       
 
       
-        <p>大一暑假，终于拥有了自己的第一台笔记本电脑。虽然价格不高，配置不高，但是作为第一台，还是把它当作宝贝一样供着，不敢乱动。直到半年后系统出现蓝屏故障，无奈找人做了系统。然而我并不喜欢总是依靠别人，从此以后，我的系统安装之路开启了。<br>啰嗦了这么多，下面正式开始介绍。<br>电脑能否开机，决定了使用哪种方法来安装系统更为合适。现在装系统并不复杂，很多傻瓜式一键装机系统镜像越来越受欢迎。</p>
-<p>镜像分为两种，文件后缀分别为”iso”和<a href="http://baike.baidu.com/view/704362.htm" target="_blank" rel="external">“</a>gho”。</p>
-<p>关于系统的选择。首先你要知道自己的电脑是多少位的处理器。可以在“我的电脑”图标上单击右键，选择属性，然后单击设备管理器，点击处理器。显示X64就是64位的，而X86则是32位的。根据处理器选择相应的系统镜像，才能发挥电脑的最大性能。<a href="http://photo.blog.sina.com.cn/showpic.html#blogid=1539f98130102w1lm&amp;url=http://album.sina.com.cn/pic/006dBXhxgy70aa0jDNk36" target="_blank" rel="external"><img src="http://upload-images.jianshu.io/upload_images/1837782-74a812b54f4ff8ba?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="系统安装之路一准备篇"></a></p>
-<p>下载镜像。根据系统的不同，镜像的大小各不相同。一般XP镜像八九百兆，win7镜像2-3G，win8.1镜像3-4G。</p>
-<p>C盘分区大小。我的硬盘比较大，所以直接划出了100G给C盘，无论装什么系统都绰绰有余。</p>
-<p>必备软件：驱动人生网卡版，因为有的系统装完后连不上无线网，这时就需要安装此软件来填补网卡的空白。</p>
-<p>如果电脑可以正常启动，可以直接选取简单的安装方式。如果不能正常启动的话，就需要借助U盘启动盘进入pe模式进行安装或者使用系统安装光盘（至今没用过）。</p>
-<p><strong>注：相关下载地址</strong><br><a href="http://www.msdn.hk/" target="_blank" rel="external">1. iso镜像</a><br><a href="http://www.ghostwin7win8.com/" target="_blank" rel="external">2. gho镜像</a><br><a href="http://xiazai.zol.com.cn/detail/38/375956.shtml" target="_blank" rel="external">3. 驱动人生网卡版</a><br><strong> 姊妹篇：</strong><br><a href="http://www.jianshu.com/p/c20fa668dbbe" target="_blank" rel="external">系统安装之路二电脑能启动</a><br><a href="http://www.jianshu.com/p/b76adad83414" target="_blank" rel="external">系统安装之路三电脑无法启动</a></p>
+        <p>参考文章<a href="http://www.linuxidc.com/Linux/2016-04/130520.htm" target="_blank" rel="external">Ubuntu 16.04 U盘安装图文教程</a></p>
+<ul>
+<li>问题</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1837782-2729c17d5a1914d9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图1.jpg"></p>
+<p>按照以上文章结束时，我的电脑提示<code>无法将grub-efi-amd64-signed安装到/target/</code>，重装好多次都是卡在这一步。<br>解决<br>之前的步骤中电脑会提示电脑是以UEFI启动什么的，不选在UEFI模式中运行，选择后退一项，也能正常安装。（当时没有截图，现在记不清了）</p>
+<ul>
+<li>后续<br>1.创建root用户<blockquote>
+<p>sudo passwd</p>
+</blockquote>
+</li>
+</ul>
+<ol>
+<li>更新系统<blockquote>
+<p>sudo apt update<br>sudo apt dist-upgrade</p>
+</blockquote>
+</li>
+</ol>
+<p>3.配置输入法快捷键<br>4.设置<code>系统设置-键盘-快捷键-启动器-启动终端</code>快捷键为<code>super+R</code><br>5.安装vim</p>
+<blockquote>
+<p>sudo apt install vim</p>
+</blockquote>
+<p>配置</p>
+<blockquote>
+<p>sudo vim /etc/vim/vimrc</p>
+</blockquote>
+<p>插入(用jk代替Esc退出编辑模式)</p>
+<blockquote>
+<p>:imap jk <esc> </esc></p>
+</blockquote>
+<p>6.将文件夹改为英文路径<br>首先修改现有主文件夹下各文件夹名称：<br>desktop、 documents、 download、 music、 pictures、 public、  video ……<br>然后编辑配置文件：</p>
+<blockquote>
+<p>gedit ~/.config/user-dirs.dirs</p>
+</blockquote>
+<p>把文件夹指向改掉，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">XDG_DESKTOP_DIR=&quot;$HOME/desktop&quot;</div><div class="line">XDG_DOWNLOAD_DIR=&quot;$HOME/download&quot;</div><div class="line">XDG_PUBLICSHARE_DIR=&quot;$HOME/public&quot;</div><div class="line">XDG_DOCUMENTS_DIR=&quot;$HOME/documents&quot;</div><div class="line">XDG_MUSIC_DIR=&quot;$HOME/music&quot;</div><div class="line">XDG_PICTURES_DIR=&quot;$HOME/pictures&quot;</div><div class="line">XDG_VIDEOS_DIR=&quot;$HOME/video&quot;</div></pre></td></tr></table></figure></p>
+<p>7.在系统启动界面，Win8.1系统处于最后一项，如果需要让Win8.1处于第一项，可以这样设置：</p>
+<p>1、进入Ubuntu系统。</p>
+<p>2、Ctrl+Alt+T打开终端，输入“sudo nautilus”，以root权限打开资源管理器。</p>
+<p>3、找到“计算机/etc/grub.d/30_os-prober”文件，将其名称修改为“06_os-prober”即可：</p>
+<p>8.ubuntu16.04的软件中心应该是有bug，安装不了第三方.deb文件，我们只有使用dpkg -i 或者gdebi的方式安装，我使用的是后者，因为后者功能更加强大。要使用gdebi命令先要安装它：</p>
+<blockquote>
+<p>sudo apt install gdebi-core</p>
+</blockquote>
+<p>然后就可以安装.deb文件了。安装过程如下：先切换到你下载的lantern的安装文件目录下，直接使用：</p>
+<blockquote>
+<p>sudo gdebi xxxxxx.deb</p>
+</blockquote>
+<p>9.安装git</p>
+<blockquote>
+<p>sudo apt-get install git</p>
+</blockquote>
+<p>10.安装lantern</p>
+<blockquote>
+<p>git clone <a href="https://github.com/getlantern/lantern.git" target="_blank" rel="external">https://github.com/getlantern/lantern.git</a><br>cd lantern<br>make lantern<br>./lantern</p>
+</blockquote>
 
       
     </div>
@@ -355,7 +402,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/折腾/" rel="tag"># 折腾</a>
+            <a href="/tags/linux备忘/" rel="tag"># linux备忘</a>
           
         </div>
       
@@ -368,8 +415,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/20/CentOs服务器常用命令/" rel="next" title="Centos服务器常用命令">
-                <i class="fa fa-chevron-left"></i> Centos服务器常用命令
+              <a href="/2016/11/01/ubuntu常用命令及部分快捷键/" rel="next" title="ubuntu常用命令及部分快捷键">
+                <i class="fa fa-chevron-left"></i> ubuntu常用命令及部分快捷键
               </a>
             
           </div>
@@ -378,8 +425,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/11/01/ubuntu常用命令及部分快捷键/" rel="prev" title="ubuntu常用命令及部分快捷键">
-                ubuntu常用命令及部分快捷键 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/11/01/ubuntu下php环境搭建/" rel="prev" title="ubuntu下php环境搭建">
+                ubuntu下php环境搭建 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
