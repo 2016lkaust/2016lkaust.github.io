@@ -3,17 +3,22 @@
 <head>
     <meta charset="utf-8">
     
-    <title>归档 | look的博客</title>
+    <title>ubuntu下php环境搭建 | look的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="师傅领进门，修行在个人">
-<meta property="og:type" content="website">
-<meta property="og:title" content="look的博客">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+    <meta name="description" content="将要安装的软件：Apache+mysql+php（+phpMyAdmin用于管理数据库）">
+<meta name="keywords" content="ubuntu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ubuntu下php环境搭建">
+<meta property="og:url" content="http://yoursite.com/2016/12/14/ubuntu下php环境搭建/index.html">
 <meta property="og:site_name" content="look的博客">
-<meta property="og:description" content="师傅领进门，修行在个人">
+<meta property="og:description" content="将要安装的软件：Apache+mysql+php（+phpMyAdmin用于管理数据库）">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1837782-2ffbfc73feb0c6e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1837782-05b9901c8976707f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-04-22T01:27:36.160Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="look的博客">
-<meta name="twitter:description" content="师傅领进门，修行在个人">
+<meta name="twitter:title" content="ubuntu下php环境搭建">
+<meta name="twitter:description" content="将要安装的软件：Apache+mysql+php（+phpMyAdmin用于管理数据库）">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1837782-2ffbfc73feb0c6e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
     
 
     
@@ -170,126 +175,239 @@ var _hmt = _hmt || [];
 </aside>
 
             
-            <section id="main"><div class="timeline timeline-wrap">
-    
-            <div class="timeline-row timeline-row-major">
-                <span class="node"><i class="fa fa-calendar"></i></span>
-                <h1 class="title">2016</h1>
-            </div>
+            <section id="main"><article id="post-ubuntu下php环境搭建" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+        
+            <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2016/10/31/ubuntu下编程环境的搭建/">ubuntu下编程环境的搭建</a>
+        <h1 class="article-title" itemprop="name">
+            ubuntu下php环境搭建
         </h1>
     
 
-                <div class="article-meta">
-                    
+                
+                    <div class="article-meta">
+                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2016/10/31/ubuntu下编程环境的搭建/">
-            <time datetime="2016-10-31T13:00:00.000Z" itemprop="datePublished">2016-10-31</time>
+        <a href="/2016/12/14/ubuntu下php环境搭建/">
+            <time datetime="2016-12-13T16:00:00.000Z" itemprop="datePublished">2016-12-14</time>
         </a>
     </div>
 
 
-                    
+                        
     <div class="article-category">
     	<i class="fa fa-folder"></i>
         <a class="article-category-link" href="/categories/Linux/">Linux</a>
     </div>
 
-                    
+                        
     <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link" href="/tags/ubuntu/">ubuntu</a>
     </div>
 
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+                    </div>
                 
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2016/10/25/jsp页面下载文件/">jsp页面下载文件</a>
-        </h1>
-    
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>将要安装的软件：<br>Apache+mysql+php（+phpMyAdmin用于管理数据库）<br><a id="more"></a></p>
+<h1 id="1-安装-Apache"><a href="#1-安装-Apache" class="headerlink" title="1.安装 Apache"></a>1.安装 Apache</h1><h2 id="（1）安装apache命令"><a href="#（1）安装apache命令" class="headerlink" title="（1）安装apache命令"></a>（1）安装apache命令</h2><blockquote>
+<p> sudo apt-get install apache</p>
+</blockquote>
+<h2 id="2-测试-Apache安装是否成功"><a href="#2-测试-Apache安装是否成功" class="headerlink" title="(2)测试 Apache安装是否成功"></a>(2)测试 Apache安装是否成功</h2><p>浏览器输入<a href="http://localhost/" target="_blank" rel="external">http://localhost/</a>，如果成功：<br><img src="http://upload-images.jianshu.io/upload_images/1837782-2ffbfc73feb0c6e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="安装成功"></p>
+<h1 id="2-安装-PHP"><a href="#2-安装-PHP" class="headerlink" title="2.安装 PHP"></a>2.安装 PHP</h1><p> <a href="http://www.linuxdiyf.com/linux/20550.html" target="_blank" rel="external">关于Ubuntu16.04不能安装libapache2-mod-php5</a></p>
+<blockquote>
+<p> ubuntu16.04已经选择PHP7.0作为新的基础包了，所以不能再Ubuntu16.04上安装PHP5，如果硬要安装，则会出现依赖问题，而且一般无法解决：<br>比如，Ubuntu16.04上的软件需要的是一个较高版本的库，而PHP5需要的是一个较低版本的库，系统会提示：libapache2-mod-php5依赖于某某库，但该库不能被安装。因为php5基于较低版本的库文件，如果安装的话有其他软件将不能运行。<br>故，推荐安装PHP7.0，并且用“libapache2-mod-php”代替“libapache2-mod-php5”。<br>最后，如果阁下非要使用PHP5，那就只好回到Ubuntu14.04LTC（推荐）了！</p>
+</blockquote>
+<p>简言之</p>
+<ul>
+<li>(1)命令行安装php7<blockquote>
+<p>sudo apt-get install php7<br>sudo apt-get libapache2-mod-php</p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><p>(2)重启一下apache</p>
+<blockquote>
+<p>sudo /etc/init.d/apache2 restart</p>
+</blockquote>
+</li>
+<li><p>(3)准备一个测试文件<code>first.php</code>放在<code>/var/www/html/</code>目录下,内容为<br><code>&lt;?php phpinfo();?&gt;</code></p>
+</li>
+<li><p>(4)测试php文件是否能被解析。在浏览器输入</p>
+<blockquote>
+<p>localhost/first.php</p>
+</blockquote>
+</li>
+</ul>
+<p>到这一步，我不能正常访问，出现了404错误，非常感谢<a href="http://blog.csdn.net/hitabc141592/article/details/23556079" target="_blank" rel="external">http://blog.csdn.net/hitabc141592/article/details/23556079</a>这篇文章。<br>将这两个文件链接到mods-enabled目录下：</p>
+<blockquote>
+<p>sudo ln -s /etc/apache2/mods-available/php7.0.load /etc/apache2/mods-enabled/php7.load<br>sudo ln -s /etc/apache2/mods-available/php7.0.conf /etc/apache2/mods-enabled/php.conf</p>
+</blockquote>
+<p>注：<code>/etc/apache2/mods-available/php7.0.load</code>是文件路径，可以沿着路径打开去看看，<code>/etc/apache2/mods-enabled/php7.load</code>是链接到的路径。意思就是将这两个文件加入apache配置中。</p>
+<ul>
+<li>(5)准备的php文件为什么放在<code>/var/www/html/</code>下面？<br>查看apache配置文件就清楚了，apache2的默认目录配置在/etc/apache2/sites-enabled/00default文件中，里面有一句<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">DocumentRoot /var/www/html</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>说明这个目录(<code>/var/www/html/</code>)是默认开发目录。</p>
+<h1 id="3-安装mysql"><a href="#3-安装mysql" class="headerlink" title="3.安装mysql"></a>3.安装mysql</h1><blockquote>
+<p>sudo apt-get install mysql-server</p>
+</blockquote>
+<p> 设置用户root及密码。</p>
+<h1 id="4-更改-var-www-html-的权限"><a href="#4-更改-var-www-html-的权限" class="headerlink" title="4.更改/var/www/html/的权限"></a>4.更改<code>/var/www/html/</code>的权限</h1><blockquote>
+<p>sudo chmod 777 /var/www/html</p>
+</blockquote>
+<p> 注：我是运行<code>sudo nautilus</code>，以管理员身份打开文件夹，直接更改了这个文件的属性中的权限。</p>
+<h1 id="5-安装phpMyAdmin，用于管理mysql，属于mysql的可视化界面。"><a href="#5-安装phpMyAdmin，用于管理mysql，属于mysql的可视化界面。" class="headerlink" title="5.安装phpMyAdmin，用于管理mysql，属于mysql的可视化界面。"></a>5.安装phpMyAdmin，用于管理mysql，属于mysql的可视化界面。</h1><h2 id="（1）安装"><a href="#（1）安装" class="headerlink" title="（1）安装"></a>（1）安装</h2><blockquote>
+<p>sudo apt-get install phpmyadmin</p>
+</blockquote>
+<p>   这里需要输入root用户的密码（两次）。</p>
+<p> ##（2）把<code>phpmyadmin中</code>的<code>apache.conf</code>（apache配置文件）复制到<code>apache2/sites-available</code>下的<code>phpmyadmin</code>文件下。</p>
+<blockquote>
+<p>cp /etc/phpmyadmin/apache.conf /etc/apache2/sites-available/phpmyadmin</p>
+</blockquote>
+<p> ##（3）创建phpMyAdmin链接。</p>
+<blockquote>
+<p>sudo ln -s /usr/share/phpmyadmin /var/www/html/</p>
+</blockquote>
+<p> 输入<code>localhost/phpmyadmin/</code>,成功访问。<br><img src="http://upload-images.jianshu.io/upload_images/1837782-05b9901c8976707f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="phpMyAdmin首页"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">*****************如果失败了，继续4,5,6步，成功的话就可以结束了。*****************</div></pre></td></tr></table></figure></p>
+<h2 id="（4）接着输入，进入sites-enabled文件夹下："><a href="#（4）接着输入，进入sites-enabled文件夹下：" class="headerlink" title="（4）接着输入，进入sites-enabled文件夹下："></a>（4）接着输入，进入sites-enabled文件夹下：</h2><blockquote>
+<p>cd /etc/apache2/sites-enabled/ </p>
+</blockquote>
+<p> ##（5）进入之后，要建立一个通往配置文件的链接以便能利用它。</p>
+<blockquote>
+<p>sudo ln -s ../sites-available/phpmyadmin</p>
+</blockquote>
+<p> ##（6）重启apache2</p>
+<blockquote>
+<p>sudo /etc/init.d/apache2 restart</p>
+</blockquote>
 
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2016/10/25/jsp页面下载文件/">
-            <time datetime="2016-10-25T11:40:00.000Z" itemprop="datePublished">2016-10-25</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/JavaEE/">JavaEE</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/jsp/">jsp</a>
-    </div>
-
-                </div>
-            </div>
+        
         </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2016/10/08/jsp传参方法小结/">jsp传参方法小结</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2016/10/08/jsp传参方法小结/">
-            <time datetime="2016-10-08T12:10:00.000Z" itemprop="datePublished">2016-10-08</time>
-        </a>
-    </div>
+        <footer class="article-footer">
+            <div class="share-container">
 
 
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Java/">Java</a>
-    </div>
 
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/jsp/">jsp</a>
-    </div>
-
-                </div>
-            </div>
-        </div>
-    
 </div>
 
-    <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/archives/">&laquo; 上一页</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-    </nav>
+    <a data-url="http://yoursite.com/2016/12/14/ubuntu下php环境搭建/" data-id="cj1s0lcb8000ae3pvoiwud2tc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://yoursite.com/2016/12/14/ubuntu下php环境搭建/#comments" id="sourceId::2016/12/14/ubuntu下php环境搭建/" class="article-comment-link cy_cmt_count">评论</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/12/11/ubuntu安装及初始化/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    ubuntu安装及初始化
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2017/01/02/系统安装之路一准备篇/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">系统安装之路一准备篇</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div id="SOHUCS" sid="2016/12/14/ubuntu下php环境搭建/"></div>
+
+    
+    </section>
+
 </section>
             
                 <aside id="sidebar">

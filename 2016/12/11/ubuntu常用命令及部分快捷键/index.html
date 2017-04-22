@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <meta charset="utf-8">
+    
+    <title>ubuntu常用命令及部分快捷键 | look的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="查看系统和硬件相关信息的命令简介查看内核/操作系统/CPU信息# uname -a# head -n 1 /etc/issue # 查看操作系统版本 # cat /etc/redhat-release # 查看操作系统版本（redhat，centos，fedora） # cat /proc/cpuinfo # 查看CPU信息 # hostname # 查看计算机名 # lspci -tv# 列出所">
+<meta name="keywords" content="ubuntu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ubuntu常用命令及部分快捷键">
+<meta property="og:url" content="http://yoursite.com/2016/12/11/ubuntu常用命令及部分快捷键/index.html">
+<meta property="og:site_name" content="look的博客">
+<meta property="og:description" content="查看系统和硬件相关信息的命令简介查看内核/操作系统/CPU信息# uname -a# head -n 1 /etc/issue # 查看操作系统版本 # cat /etc/redhat-release # 查看操作系统版本（redhat，centos，fedora） # cat /proc/cpuinfo # 查看CPU信息 # hostname # 查看计算机名 # lspci -tv# 列出所">
+<meta property="og:updated_time" content="2017-04-22T01:26:39.759Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ubuntu常用命令及部分快捷键">
+<meta name="twitter:description" content="查看系统和硬件相关信息的命令简介查看内核/操作系统/CPU信息# uname -a# head -n 1 /etc/issue # 查看操作系统版本 # cat /etc/redhat-release # 查看操作系统版本（redhat，centos，fedora） # cat /proc/cpuinfo # 查看CPU信息 # hostname # 查看计算机名 # lspci -tv# 列出所">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-97846623-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+    
+        <script>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?620d5514a02cf81240e095d4d19c346d";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">look的博客</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/.">主页</a>
+                
+                    <a class="main-nav-link" href="/archives">成就</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/about">关于</a>
+                
+            </nav>
+            
+                
+                <nav id="sub-nav">
+                    <div class="profile" id="profile-nav">
+                        <a id="profile-anchor" href="javascript:;">
+                            <img class="avatar" src="/css/images/head.jpg" />
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                    </div>
+                </nav>
+            
+            <div id="search-form-wrap">
+
+    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit"> </button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/.">主页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">成就</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                <td>
+                    
+    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+                
+
+<aside id="profile">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <img id="avatar" src="/css/images/head.jpg" />
+            <h2 id="name">look</h2>
+            <h3 id="title">一入编程门，安逸是路人</h3>
+            <span id="location"><i class="fa fa-map-marker"></i>Anhui, China</span>
+            <a id="follow" target="_blank" href="https://github.com/2016lkaust/">关注我</a>
+        </div>
+        <div class="article-info profile-block">
+            <div class="article-info-block">
+                13
+                <span>文章</span>
+            </div>
+            <div class="article-info-block">
+                8
+                <span>标签</span>
+            </div>
+        </div>
+        
+        <div class="profile-block social-links">
+            <table>
+                <tr>
+                    
+                    
+                    <td>
+                        <a href="https://github.com/2016lkaust/" target="_blank" title="github" class=tooltip>
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </td>
+                    
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+</aside>
+
+            
+            <section id="main"><article id="post-ubuntu常用命令及部分快捷键" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+            ubuntu常用命令及部分快捷键
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2016/12/11/ubuntu常用命令及部分快捷键/">
+            <time datetime="2016-12-10T16:00:00.000Z" itemprop="datePublished">2016-12-11</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Linux/">Linux</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/ubuntu/">ubuntu</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h1 id="查看系统和硬件相关信息的命令简介"><a href="#查看系统和硬件相关信息的命令简介" class="headerlink" title="查看系统和硬件相关信息的命令简介"></a>查看系统和硬件相关信息的命令简介</h1><h3 id="查看内核-操作系统-CPU信息"><a href="#查看内核-操作系统-CPU信息" class="headerlink" title="查看内核/操作系统/CPU信息"></a>查看内核/操作系统/CPU信息</h3><p><code># uname -a</code><br><code># head -n 1 /etc/issue</code> # 查看操作系统版本</p>
+<p><code># cat /etc/redhat-release</code> # 查看操作系统版本（redhat，centos，fedora）</p>
+<p><code># cat /proc/cpuinfo</code> # 查看CPU信息</p>
+<p><code># hostname</code> # 查看计算机名</p>
+<p><code># lspci -tv</code># 列出所有PCI设备</p>
+<p><code># lsusb -tv</code># 列出所有USB设备</p>
+<a id="more"></a>
+<p><code># lsmod</code># 列出加载的内核模块</p>
+<p><code># env</code> # 查看环境变量资源</p>
+<p><code># free -m</code># 查看内存使用量和交换区使用量</p>
+<p><code># df -h</code> # 查看各分区使用情况</p>
+<p><code># du -sh &lt;目录名&gt;</code> # 查看指定目录的大小</p>
+<p><code># grep MemTotal /proc/meminfo</code> # 查看内存总量</p>
+<p><code># grep MemFree /proc/meminfo</code> # 查看空闲内存量</p>
+<p><code># uptime</code> # 查看系统运行时间、用户数、负载</p>
+<p><code># cat /proc/loadavg</code> # 查看系统负载磁盘和分区</p>
+<p><code># mount | column -t</code># 查看挂接的分区状态</p>
+<p><code># fdisk -l</code> # 查看所有分区</p>
+<p><code># swapon -s</code> # 查看所有交换分区</p>
+<p><code># hdparm -i /dev/hda</code> # 查看磁盘参数(仅适用于IDE设备)</p>
+<p><code># dmesg | grep IDE</code> # 查看启动时IDE设备检测状况网络</p>
+<p><code># ifconfig</code> # 查看所有网络接口的属性</p>
+<p><code># iptables -L</code> # 查看防火墙设置</p>
+<p><code># route -n</code> # 查看路由表</p>
+<p><code># netstat -lntp</code> # 查看所有监听端口</p>
+<p><code># netstat -antp</code> # 查看所有已经建立的连接</p>
+<p><code># netstat -s</code> # 查看网络统计信息进程</p>
+<p><code># ps -ef</code> # 查看所有进程</p>
+<p><code># top</code> # 实时显示进程状态用户</p>
+<p><code># w</code> # 查看活动用户</p>
+<p><code># id &lt;用户名&gt;</code> # 查看指定用户信息</p>
+<p><code># last</code> # 查看用户登录日志</p>
+<p><code># cut -d: -f1 /etc/passwd</code> # 查看系统所有用户</p>
+<p><code># cut -d: -f1 /etc/group</code> # 查看系统所有组</p>
+<p><code># crontab -l</code> # 查看当前用户的计划任务服务</p>
+<p><code># chkconfig –list</code> # 列出所有系统服务</p>
+<p><code># chkconfig –list | grep on</code> # 列出所有启动的系统服务程序</p>
+<p><code># rpm -qa</code> # 查看所有安装的软件包</p>
+<h1 id="VI模式切换和退出"><a href="#VI模式切换和退出" class="headerlink" title="VI模式切换和退出"></a>VI模式切换和退出</h1><h2 id="进入vi编辑文件内容："><a href="#进入vi编辑文件内容：" class="headerlink" title="进入vi编辑文件内容："></a>进入vi编辑文件内容：</h2><p>vi 文件名</p>
+<p>vi 目录/文件名</p>
+<p>vi进入编辑模式：</p>
+<p>Shift+字母i</p>
+<h2 id="从编辑模式返回命令模式："><a href="#从编辑模式返回命令模式：" class="headerlink" title="从编辑模式返回命令模式："></a>从编辑模式返回命令模式：</h2><p>ESC</p>
+<h2 id="从命令模式vi退出："><a href="#从命令模式vi退出：" class="headerlink" title="从命令模式vi退出："></a>从命令模式vi退出：</h2><p>:w 保存文件但不退出vi</p>
+<p>:w file 将修改另外保存到file中，不退出vi</p>
+<p>:w! 强制保存，不推出vi</p>
+<p>:wq 保存文件并退出vi</p>
+<p>:wq! 强制保存文件，并退出vi</p>
+<p>:q 不保存文件，退出vi</p>
+<p>:q! 不保存文件，强制退出vi</p>
+<p>:e! 放弃所有修改，从上次保存文件开始再编辑</p>
+<p><em>注意：千万别将英文冒号”:”敲成中文冒号”：”。</em></p>
+<p>VI前进后退操作</p>
+<p>在vi中按u可以撤销一次操作</p>
+<p>u 撤销上一步的操作</p>
+<p>Ctrl+r 恢复上一步被撤销的操作</p>
+<p>注意：</p>
+<p>如果你输入“u”两次，你的文本恢复原样，那应该是你的Vim被配置在Vi兼容模式了。</p>
+<h1 id="重做"><a href="#重做" class="headerlink" title="重做"></a>重做</h1><p>如果你撤销得太多，你可以输入CTRL-R（redo）回退前一个命令。换句话说，它撤销一个撤销。要看执行的例子，输入CTRL-R两次。字符A和它后面的空格就出现了：</p>
+<p>young intelligent turtle</p>
+<p>有一个特殊版本的撤销命令：“U”（行撤销）。行撤销命令撤销所有在前一个编辑行</p>
+<p>上的操作。 输入这些命令两次取消前一个“U”：</p>
+<p>A very intelligent turtle</p>
+<p>xxxx 删除very</p>
+<p>A intelligent turtle</p>
+<p>xxxxxx 删除turtle</p>
+<p>A intelligent</p>
+<p>用“U”恢复行</p>
+<p>A very intelligent turtle</p>
+<p>用“u”撤销“U”</p>
+<p>A intelligent</p>
+<p>“U”命令自己改变自己，“u”命令撤销操作，CTRL-R命令重做操作。这有点乱，但不用</p>
+<p>担心，用“u”和CTRL-R命令你可以切换到任何状态。</p>
+<p>流行的文本编辑器通常都有前进和后退功能，可以在文件中曾经浏览过的位置之间来回移动。在 vim 中使用 Ctrl-O 执行后退，使用 Ctrl-I 执行前进。</p>
+<p>相关帮助： :help CTRL-O :help CTRL-I :help jump-motions</p>
+<h1 id="VI查找内容"><a href="#VI查找内容" class="headerlink" title="VI查找内容"></a>VI查找内容</h1><p>使用vi编辑器编辑长文件时，常常是头昏眼花，也找不到需要更改的内容。</p>
+<p>这时，使用查找功能尤为重要。</p>
+<p>方法如下：</p>
+<p>1、命令模式下输入“/字符串”，例如“/Section 3”。</p>
+<p>2、如果查找下一个，按“n”即可。</p>
+<p>要自当前光标位置向上搜索，请使用以下命令：</p>
+<p>/pattern Enter</p>
+<p>其中，pattern表示要搜索的特定字符序列。</p>
+<p>要自当前光标位置向下搜索，请使用以下命令：</p>
+<p>?pattern Enter</p>
+<h1 id="Linux文件权限介绍"><a href="#Linux文件权限介绍" class="headerlink" title="Linux文件权限介绍"></a>Linux文件权限介绍</h1><p>r:read就是读权限 –数字4表示</p>
+<p>w:write就是写权限 –数字2表示</p>
+<p>x:excute就是执行权限 –数字1表示</p>
+<p>权限表示一共需要占9个字符的：— — —</p>
+<p>前三个字符表示用户权限，中间三个表示用户所在的组权限，最后三个表示其他用户权限</p>
+<p>例子：rw-r–r–</p>
+<p>rw-是说用户有读、写权，没有运行权，接着的r–表示用户组只有读权限，没有写入、运行权，最后的r–指其他用户只有读权限，没有写入、运行权。</p>
+<p>用数字表示就是644。</p>
+<p>例子：777</p>
+<p>777就是rwxrwxrwx，意思是用户、用户组和其他用户都有最高权限。<br>Linux下scp的用法</p>
+<p>#scp命令</p>
+<p>scp就是secure copy，一个在linux下用来进行远程拷贝文件的命令。</p>
+<p>有时我们需要获得远程服务器上的某个文件，该服务器既没有配置ftp服务器，也没有做共享，无法通过常规途径获得文件时，只需要通过简单的scp命令便可达到目的。</p>
+<h2 id="将本机文件复制到远程服务器上"><a href="#将本机文件复制到远程服务器上" class="headerlink" title="将本机文件复制到远程服务器上"></a>将本机文件复制到远程服务器上</h2><blockquote>
+<p>#scp /home/administrator/news.txt root@192.168.6.129:/etc/squid</p>
+</blockquote>
+<p>/home/administrator/      本地文件的绝对路径</p>
+<p>news.txt                          要复制到服务器上的本地文件</p>
+<p>root                                 通过root用户登录到远程服务器（也可以使用其他拥有同等权限的用户）</p>
+<p>192.168.6.129                远程服务器的ip地址（也可以使用域名或机器名）</p>
+<p>/etc/squid                       将本地文件复制到位于远程服务器上的路径</p>
+<h2 id="将远程服务器上的文件复制到本机"><a href="#将远程服务器上的文件复制到本机" class="headerlink" title="将远程服务器上的文件复制到本机"></a>将远程服务器上的文件复制到本机</h2><blockquote>
+<p>#scp remote@www.abc.com:/usr/local/sin.sh /home/administrator</p>
+</blockquote>
+<p>remote                       通过remote用户登录到远程服务器（也可以使用其他拥有同等权限的用户）</p>
+<p>www.abc.com              远程服务器的域名（当然也可以使用该服务器ip地址）</p>
+<p>/usr/local/sin.sh           欲复制到本机的位于远程服务器上的文件</p>
+<p>/home/administrator  将远程文件复制到本地的绝对路径</p>
+<p>注意两点：</p>
+<p>1.如果远程服务器防火墙有特殊限制，scp便要走特殊端口，具体用什么端口视情况而定，命令格式如下：</p>
+<blockquote>
+<p>#scp -p 4588 remote@www.abc.com:/usr/local/sin.sh /home/administrator</p>
+</blockquote>
+<p>2.使用scp要注意所使用的用户是否具有可读取远程服务器相应文件的权限。</p>
+<h1 id="压缩和解压"><a href="#压缩和解压" class="headerlink" title="压缩和解压"></a>压缩和解压</h1><h2 id="zip命令"><a href="#zip命令" class="headerlink" title="zip命令"></a>zip命令</h2><p>　　解压1：unzip FileName.zip</p>
+<p>　　解压2：unzip FileName.zip -d TargetDir</p>
+<p>　　压缩1：zip -r TargetDir/FileName.zip DirName</p>
+<p>　　压缩2：zip -r TargetDir/FileName.zip DirName/*</p>
+<p>　　压缩3：zip -r TargetDir/FileName.zip File1 File2 File3</p>
+<p>　　注意，zip解压适用于解压jar文件</p>
+<h2 id="tar命令"><a href="#tar命令" class="headerlink" title="tar命令"></a>tar命令</h2><p>　　解包：tar zxvf FileName.tar</p>
+<p>　　打包：tar czvf FileName.tar DirName</p>
+<h2 id="tar-gz-和-tgz"><a href="#tar-gz-和-tgz" class="headerlink" title=".tar.gz 和 .tgz"></a>.tar.gz 和 .tgz</h2><p>　　解压：tar zxvf FileName.tar.gz</p>
+<p>　　压缩：tar zcvf FileName.tar.gz DirName</p>
+<h2 id="tar-bz"><a href="#tar-bz" class="headerlink" title=".tar.bz"></a>.tar.bz</h2><p>　　解压：tar jxvf FileName.tar.bz</p>
+<h2 id="tar-bz2"><a href="#tar-bz2" class="headerlink" title=".tar.bz2"></a>.tar.bz2</h2><p>　　解压：tar jxvf FileName.tar.bz2</p>
+<p>　　压缩：tar jcvf FileName.tar.bz2 DirName</p>
+<h2 id="tar-Z"><a href="#tar-Z" class="headerlink" title=".tar.Z"></a>.tar.Z</h2><p>　　解压：tar Zxvf FileName.tar.Z</p>
+<p>　　压缩：tar Zcvf FileName.tar.Z DirName</p>
+<h2 id="gz命令"><a href="#gz命令" class="headerlink" title="gz命令"></a>gz命令</h2><p>　　解压1：gunzip FileName.gz</p>
+<p>　　解压2：gzip -d FileName.gz</p>
+<p>　　压缩：gzip FileName</p>
+<h2 id="bz2命令"><a href="#bz2命令" class="headerlink" title="bz2命令"></a>bz2命令</h2><p>　　解压1：bzip2 -d FileName.bz2</p>
+<p>　　解压2：bunzip2 FileName.bz2</p>
+<p>　　压缩： bzip2 -z FileName</p>
+<h2 id="bz命令"><a href="#bz命令" class="headerlink" title="bz命令"></a>bz命令</h2><p>　　解压1：bzip2 -d FileName.bz</p>
+<p>　　解压2：bunzip2 FileName.bz</p>
+<h2 id="Z命令"><a href="#Z命令" class="headerlink" title="Z命令"></a>Z命令</h2><p>　　解压：uncompress FileName.Z</p>
+<p>　　压缩：compress FileName</p>
+<h2 id="7z命令-如果没有7z命令请先执行“yum-install-p7zip”"><a href="#7z命令-如果没有7z命令请先执行“yum-install-p7zip”" class="headerlink" title="7z命令(如果没有7z命令请先执行“yum install p7zip”)"></a>7z命令(如果没有7z命令请先执行“yum install p7zip”)</h2><p>解压：7z x FileName.7z -o/home/zhichao</p>
+<p>//注意，x参数解压会自动生成与压缩文件名相同的目录，-o表示输出目录，其与目录路径之间没有空格，上面命令会解压FileName.7z到home/zhichao/FileName目录中。</p>
+<p>压缩：7z a FileName.7z DirName</p>
+<h1 id="grep命令"><a href="#grep命令" class="headerlink" title="grep命令"></a>grep命令</h1><p>grep命令使用正则表达式检索符合条件的内容，一般与其他命令组合使用。</p>
+<p>格式：</p>
+<p>grep 参数 条件</p>
+<p>参数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line">-a --text #不要忽略二进制的数据。</div><div class="line"></div><div class="line">-A&lt;显示行数&gt; --after-context=&lt;显示行数&gt; #除了显示符合范本样式的那一列之外，并显示该行之后的内容。</div><div class="line"></div><div class="line">-b --byte-offset #在显示符合样式的那一行之前，标示出该行第一个字符的编号。</div><div class="line"></div><div class="line">-B&lt;显示行数&gt; --before-context=&lt;显示行数&gt; #除了显示符合样式的那一行之外，并显示该行之前的内容。</div><div class="line"></div><div class="line">-c --count #计算符合样式的列数。</div><div class="line"></div><div class="line">-C&lt;显示行数&gt; --context=&lt;显示行数&gt;或-&lt;显示行数&gt; #除了显示符合样式的那一行之外，并显示该行之前后的内容。</div><div class="line"></div><div class="line">-d &lt;动作&gt; --directories=&lt;动作&gt; #当指定要查找的是目录而非文件时，必须使用这项参数，否则grep指令将回报信息并停止动作。</div><div class="line"></div><div class="line">-e&lt;范本样式&gt; --regexp=&lt;范本样式&gt; #指定字符串做为查找文件内容的样式。</div><div class="line"></div><div class="line">-E --extended-regexp #将样式为延伸的普通表示法来使用。</div><div class="line"></div><div class="line">-f&lt;规则文件&gt; --file=&lt;规则文件&gt; #指定规则文件，其内容含有一个或多个规则样式，让grep查找符合规则条件的文件内容，格式为每行一个规则样式。</div><div class="line"></div><div class="line">-F --fixed-regexp #将样式视为固定字符串的列表。</div><div class="line"></div><div class="line">-G --basic-regexp #将样式视为普通的表示法来使用。</div><div class="line"></div><div class="line">-h --no-filename #在显示符合样式的那一行之前，不标示该行所属的文件名称。</div><div class="line"></div><div class="line">-H --with-filename #在显示符合样式的那一行之前，表示该行所属的文件名称。</div><div class="line"></div><div class="line">-i --ignore-case #忽略字符大小写的差别。</div><div class="line"></div><div class="line">-l --file-with-matches #列出文件内容符合指定的样式的文件名称。</div><div class="line"></div><div class="line">-L --files-without-match #列出文件内容不符合指定的样式的文件名称。</div><div class="line"></div><div class="line">-n --line-number #在显示符合样式的那一行之前，标示出该行的列数编号。</div><div class="line"></div><div class="line">-q --quiet或--silent #不显示任何信息。</div><div class="line"></div><div class="line">-r --recursive #此参数的效果和指定“-d recurse”参数相同。</div><div class="line"></div><div class="line">-s --no-messages #不显示错误信息。</div><div class="line"></div><div class="line">-v --revert-match #显示不包含匹配文本的所有行。</div><div class="line"></div><div class="line">-V --version #显示版本信息。</div><div class="line"></div><div class="line">-w --word-regexp #只显示全字符合的列。</div><div class="line"></div><div class="line">-x --line-regexp #只显示全列符合的列。</div><div class="line"></div><div class="line">-y #此参数的效果和指定“-i”参数相同。</div></pre></td></tr></table></figure></p>
+<p>示例：</p>
+<p>从文件info.txt中读取关键词system进行搜索</p>
+<p>cat /home/usr/download/info.txt | grep -f system</p>
+<p>从文件info.txt中读取关键词system进行搜索并显示行号</p>
+<p>cat /home/usr/download/info.txt | grep -nf system</p>
+<h1 id="cat命令"><a href="#cat命令" class="headerlink" title="cat命令"></a>cat命令</h1><p>cat命令用来显示文件内容，或者将几个文件连接起来显示，或者从标准输入读取内容并显示，它常与重定向符号配合使用。</p>
+<p>格式：</p>
+<p>cat 参数 文件</p>
+<p>参数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">-A, --show-all  等价于 -vET</div><div class="line"></div><div class="line">-b, --number-nonblank 对非空输出行编号</div><div class="line"></div><div class="line">-e   等价于 -vE</div><div class="line"></div><div class="line">-E, --show-ends  在每行结束处显示 $</div><div class="line"></div><div class="line">-n, --number 对输出的所有行编号,由1开始对所有输出的行数编号</div><div class="line"></div><div class="line">-s, --squeeze-blank 有连续两行以上的空白行，就代换为一行的空白行</div><div class="line"></div><div class="line">-t   与 -vT 等价</div><div class="line"></div><div class="line">-T, --show-tabs  将跳格字符显示为 ^I</div><div class="line"></div><div class="line">-u   (被忽略)</div><div class="line"></div><div class="line">-v, --show-nonprinting 使用 ^ 和 M- 引用，除了 LFD 和 TAB 之外</div></pre></td></tr></table></figure></p>
+<p>示例：</p>
+<p>把 log.php 的文件内容加上行号后输出到new_log.php这个文件中</p>
+<p>cat -n /data/www/project/log.php /data/www/project/new_log.php</p>
+<h1 id="ps命令"><a href="#ps命令" class="headerlink" title="ps命令"></a>ps命令</h1><p>ps命令是process status的缩写，顾名思义就是查看系统中所有进程状态状态。</p>
+<p>ps命令查看的程序状态并不是动态连续的，如果想对进程实施监控，请用top命令。</p>
+<p>如果直接用ps命令，会显示所有进程的状态，通常结合grep命令查看某进程的状态。</p>
+<p>格式：</p>
+<p>ps 参数</p>
+<p>参数：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">a 显示所有进程</div><div class="line"></div><div class="line">-a 显示同一终端下的所有程序</div><div class="line"></div><div class="line">-A 显示所有进程</div><div class="line"></div><div class="line">c 显示进程的真实名称</div><div class="line"></div><div class="line">-N 反向选择</div><div class="line"></div><div class="line">-e 等于“-A”</div><div class="line"></div><div class="line">e 显示环境变量</div><div class="line"></div><div class="line">f 显示程序间的关系</div><div class="line"></div><div class="line">-H 显示树状结构</div><div class="line"></div><div class="line">r 显示当前终端的进程</div><div class="line"></div><div class="line">T 显示当前终端的所有程序</div><div class="line"></div><div class="line">u 指定用户的所有进程</div><div class="line"></div><div class="line">-au 显示较详细的资讯</div><div class="line"></div><div class="line">-aux 显示所有包含其他使用者的行程</div></pre></td></tr></table></figure></p>
+<p>示例：</p>
+<p>显示java相关程序</p>
+<p>ps aux|grep java</p>
+<p>显示httpd相关程序</p>
+<p>ps aux|grep httpd</p>
+<p>查看正在使用8080端口的程序</p>
+<p>ps -ef|grep 8080</p>
+<h1 id="fuser-命令"><a href="#fuser-命令" class="headerlink" title="fuser 命令"></a>fuser 命令</h1><p>fuser用于查找正在使用指定的某个文件、挂载点、网络端口的进程的详细信息。</p>
+<p>格式：</p>
+<p>fuser 参数 文件或挂载点或网络端口</p>
+<p>参数：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">a 显示所有命令行中指定的文件，默认情况下被访问的文件才会被显示。</div><div class="line"></div><div class="line">-c 和-m一样，用于POSIX兼容。</div><div class="line"></div><div class="line">-d 暗示使用了 -c 和 -x 标志。关于任何与文件系统（自父目录删除的）无链接的打开文件的报告。当与 -V 标志一起使用时，它也会报告被删除文件的节点号和大小。</div><div class="line"></div><div class="line">-f 仅对文件的打开实例报告。</div><div class="line"></div><div class="line">-i 杀掉进程之前询问用户，如果没有-k这个选项会被忽略。</div><div class="line"></div><div class="line">-k 杀掉访问文件的进程。如果没有指定-signal就会发送SIGKILL信号。</div><div class="line"></div><div class="line">-l 列出所有已知的信号名称。</div><div class="line"></div><div class="line">-m name 指定一个挂载文件系统上的文件或者被挂载的块设备（名称name）。这样所有访问这个文件或者文件系统的进程都会被列出来。如果指定的是一个目录会自动转换成,并使用所有挂载在那个目录下面的文件系统。</div><div class="line"></div><div class="line">-n space 指定一个不同的命名空间(space).这里支持不同的空间文件(文件名，此处默认)、tcp(本地tcp端口)、udp(本地udp端口)。对于端口， 可以指定端口号或者名称，如果不会引起歧义那么可以使用简单表示的形式，例如：name/space (即形如:80/tcp之类的表示)。</div><div class="line"></div><div class="line">-s 静默模式，这时候-u,-v会被忽略。-a不能和-s一起使用。</div><div class="line"></div><div class="line">-signal 使用指定的信号，而不是用SIGKILL来杀掉进程。可以通过名称或者号码来表示信号(例如-HUP,-1),这个选项要和-k一起使用，否则会被忽略。</div><div class="line"></div><div class="line">-u 在每个PID后面添加进程拥有者的用户名称。</div><div class="line"></div><div class="line">-v 详细模式。输出似ps命令的输出，包含PID,USER,COMMAND等许多域,如果是内核访问的那么PID为kernel. -V 输出版本号。</div><div class="line"></div><div class="line">-x 与 -c 或 -f 连用，报告除标准 fuser 输出以外的可执行的和可载入的对象。</div><div class="line"></div><div class="line">-4 使用IPV4套接字,不能和-6一起应用，只在-n的tcp和udp的命名存在时不被忽略。</div><div class="line"></div><div class="line">-6 使用IPV6套接字,不能和-4一起应用，只在-n的tcp和udp的命名存在时不被忽略。</div></pre></td></tr></table></figure></p>
+<p>示例：</p>
+<p>查看和关闭正在使用readme.txt文件的程序</p>
+<p>fuser -m -v readme.txt</p>
+<p>fuser -m -k readme.txt</p>
+<p>查看和关闭正在使用80端口的程序</p>
+<p>fuser -n -v tcp 80</p>
+<p>fuser -n -k tcp 80</p>
+<p>chown命令</p>
+<p>chown命令将指定文件或文件夹的拥有者改为指定的用户或组，用户可以是用户名或者用户ID，组可以是组名或者组ID，文件是以空格分开的要改变权限的文件列表，支持通配符。</p>
+<p>格式：</p>
+<h1 id="chown-参数-用户-文件"><a href="#chown-参数-用户-文件" class="headerlink" title="chown 参数 用户 文件"></a>chown 参数 用户 文件</h1><p>参数：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">-c 显示更改的部分的信息</div><div class="line"></div><div class="line">-f 忽略错误信息</div><div class="line"></div><div class="line">-h 修复符号链接</div><div class="line"></div><div class="line">-R 处理指定目录以及其子目录下的所有文件</div><div class="line"></div><div class="line">-v 显示详细的处理信息</div><div class="line"></div><div class="line">-deference 作用于符号链接的指向，而不是链接文件本身</div></pre></td></tr></table></figure></p>
+<p>示例：</p>
+<p>将目录/data/www/project/下的所有文件和目录的拥有者都修改为apache账户。</p>
+<p>chown -R apache.apache /data/www/project/</p>
+<h1 id="chmod命令"><a href="#chmod命令" class="headerlink" title="chmod命令"></a>chmod命令</h1><p>chmod命令用于改变linux系统文件或目录的访问权限，用它控制文件或目录的访问权限。</p>
+<p>Linux系统中的每个文件和目录都有访问许可权限，用它来确定谁可以通过何种方式对文件和目录进行访问和操作。</p>
+<p>格式：</p>
+<p>chmod 参数 权限模式 文件</p>
+<p>参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">-c 当发生改变时，报告处理信息</div><div class="line"></div><div class="line">-f 错误信息不输出</div><div class="line"></div><div class="line">-R 处理指定目录以及其子目录下的所有文件</div><div class="line"></div><div class="line">-v 运行时显示详细处理信息</div></pre></td></tr></table></figure></p>
+<p>示例：</p>
+<p>将目录/data/www/project/下的所有文件和目录的访问权限修改为“当前用户、当前用户组和其他用户都可读可写可执行”的权限。</p>
+<p>chown -R 777 /data/www/project/</p>
+<h1 id="kill命令"><a href="#kill命令" class="headerlink" title="kill命令"></a>kill命令</h1><p>kill命令用于关闭指定进程。</p>
+<p>格式：</p>
+<p>kill 参数 信号 进程ID</p>
+<p>参数：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">-s 指定发送信号</div><div class="line"></div><div class="line">-l 根据信号名显示信号编号，若果不加信号的编号参数，则使用“-l”参数会列出全部的信号名称</div><div class="line"></div><div class="line">-a 当处理当前进程时，不限制命令名和进程号的对应关系</div><div class="line"></div><div class="line">-p 指定kill 命令只打印相关进程的进程号，而不发送任何信号</div><div class="line"></div><div class="line">-u 指定用户</div></pre></td></tr></table></figure></p>
+<h1 id="信号："><a href="#信号：" class="headerlink" title="信号："></a>信号：</h1><h2 id="信号名-信号编号-信号含义"><a href="#信号名-信号编号-信号含义" class="headerlink" title="信号名 信号编号 信号含义"></a>信号名 信号编号 信号含义</h2><p>HUP 1 终端断线</p>
+<p>INT 2 中断</p>
+<p>QUIT 3 退出</p>
+<p>TERM 15 终止</p>
+<p>KILL 9 强制终止</p>
+<p>CONT 18 继续（与STOP相反）</p>
+<p>STOP 19 暂停（</p>
+<p>示例：</p>
+<p>显示信号KILL的信号编号</p>
+<p>kill -l KILL</p>
+<p>关闭apache用户下所有进程</p>
+<p>kill -u apache.apache</p>
+<p>强制关闭进程ID为1937的进程，参数s可以省略。</p>
+<p>kill -s 9 1937</p>
+<p>kill -9 1937</p>
+<h1 id="top命令"><a href="#top命令" class="headerlink" title="top命令"></a>top命令</h1><p>top命令查看系统中各个进程的资源占用状况，默认使用cpu占用来排序显示，top命令显示的结果是实时的。</p>
+<p>格式：</p>
+<p>top 参数</p>
+<p>参数：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">-b 批处理</div><div class="line"></div><div class="line">-c 显示完整的治命令</div><div class="line"></div><div class="line">-i<span class="tag">&lt;<span class="name">时间</span>&gt;</span> 设置间隔时间</div><div class="line"></div><div class="line">-I 忽略失效过程</div><div class="line"></div><div class="line">-p<span class="tag">&lt;<span class="name">进程号</span>&gt;</span> 指定进程</div><div class="line"></div><div class="line">-n<span class="tag">&lt;<span class="name">次数</span>&gt;</span> 循环显示的次数</div><div class="line"></div><div class="line">-s 保密模式</div><div class="line"></div><div class="line">-S 累积模式</div><div class="line"></div><div class="line">-u<span class="tag">&lt;<span class="name">用户名</span>&gt;</span> 指定用户名</div></pre></td></tr></table></figure></p>
+<p>示例：</p>
+<p>查看所有程序资源占用状况</p>
+<p>top</p>
+<p>查看apache用户所有程序资源占用状况</p>
+<p>top -u apache.apache</p>
+<h1 id="find命令"><a href="#find命令" class="headerlink" title="find命令"></a>find命令</h1><p>在指定目录中查找指定条件的文件或文件夹。</p>
+<p>格式：</p>
+<p>find 目录路径 选项 查找条件</p>
+<p>选项：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line">-name 按照文件名查找文件。</div><div class="line"></div><div class="line">-perm 按照文件权限来查找文件。</div><div class="line"></div><div class="line">-prune 使用这一选项可以使find命令不在当前指定的目录中查找，如果同时使用-depth选项，那么-prune将被find命令忽略。</div><div class="line"></div><div class="line">-user 按照文件属主来查找文件。</div><div class="line"></div><div class="line">-group 按照文件所属的组来查找文件。</div><div class="line"></div><div class="line">-mtime -n +n 按照文件的更改时间来查找文件， - n表示文件更改时间距现在n天以内，+ n表示文件更改时间距现在n天以前。find命令还有-atime和-ctime 选项，但它们都和-m time选项。</div><div class="line"></div><div class="line">-nogroup 查找无有效所属组的文件，即该文件所属的组在/etc/groups中不存在。</div><div class="line"></div><div class="line">-nouser 查找无有效属主的文件，即该文件的属主在/etc/passwd中不存在。</div><div class="line"></div><div class="line">-newer file1 ! file2 查找更改时间比文件file1新但比文件file2旧的文件。</div><div class="line"></div><div class="line">-type<span class="tag">&lt;<span class="name">类型参数</span>&gt;</span> 查找某一类型的文件，诸如：</div><div class="line"></div><div class="line">b - 块设备文件。</div><div class="line"></div><div class="line">d - 目录。</div><div class="line"></div><div class="line">c - 字符设备文件。</div><div class="line"></div><div class="line">p - 管道文件。</div><div class="line"></div><div class="line">l - 符号链接文件。</div><div class="line"></div><div class="line">f - 普通文件。</div><div class="line"></div><div class="line">-size n：[c] 查找文件长度为n块的文件，带有c时表示文件长度以字节计。-depth：在查找文件时，首先查找当前目录中的文件，然后再在其子目录中查找。</div><div class="line"></div><div class="line">-fstype：查找位于某一类型文件系统中的文件，这些文件系统类型通常可以在配置文件/etc/fstab中找到，该配置文件中包含了本系统中有关文件系统的信息。</div><div class="line"></div><div class="line">-mount：在查找文件时不跨越文件系统mount点。</div><div class="line"></div><div class="line">-follow：如果find命令遇到符号链接文件，就跟踪至链接所指向的文件。</div><div class="line"></div><div class="line">-cpio：对匹配的文件使用cpio命令，将这些文件备份到磁带设备中。</div><div class="line"></div><div class="line">-amin n 查找系统中最后N分钟访问的文件</div><div class="line"></div><div class="line">-atime n 查找系统中最后n*24小时访问的文件</div><div class="line"></div><div class="line">-cmin n 查找系统中最后N分钟被改变文件状态的文件</div><div class="line"></div><div class="line">-ctime n 查找系统中最后n*24小时被改变文件状态的文件</div><div class="line"></div><div class="line">-mmin n 查找系统中最后N分钟被改变文件数据的文件</div><div class="line"></div><div class="line">-mtime n 查找系统中最后n*24小时被改变文件数据的文件</div></pre></td></tr></table></figure></p>
+<p>示例：</p>
+<p>查找 “/”目录（Linux系统根目录）下名称为httpd.conf的文件</p>
+<p>find / -name httpd.conf</p>
+<p>查找 “/data/www/project/”目录下所有php文件</p>
+<p>find /data/www/project -name *.php</p>
+<p>查找 “.”目录（当前目录）下权限为777的文件</p>
+<p>find . -perm 777</p>
+<p>查找 “/”目录下48小时内修改过的文件</p>
+<p>find / -atime -2</p>
+<p>查找 “/”目录下所有文件夹</p>
+<p>find / -type d</p>
+<p>查找 “/”目录下大于1kb的文件</p>
+<p>find / -size +1000c</p>
+<h1 id="whereis命令"><a href="#whereis命令" class="headerlink" title="whereis命令"></a>whereis命令</h1><p>whereis命令只能用于程序名的搜索，而且只搜索二进制文件（参数-b）、说明文件（参数-m）和源代码文件（参数-s），如果省略参数，则返回所有信息。</p>
+<p>和find相比，whereis查找的速度非常快，这是因为linux系统会将 系统内的所有文件都记录在一个数据库文件中，当使用whereis和下面即将介绍的locate时，会从数据库中查找数据，而不是像find命令那样，通 过遍历硬盘来查找，效率自然会很高。</p>
+<p>但是该数据库文件并不是实时更新，默认情况下时一星期更新一次，因此，我们在用whereis和locate 查找文件时，有时会找到已经被删除的数据，或者刚刚建立文件，却无法查找到，原因就是因为数据库文件没有被更新。</p>
+<p>whereis常用于查找安装程序的安装目录。</p>
+<p>格式：</p>
+<p>whereis 参数 程序名</p>
+<p>参数：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">-b 定位可执行文件。</div><div class="line"></div><div class="line">-m 定位帮助文件。</div><div class="line"></div><div class="line">-s 定位源代码文件。</div><div class="line"></div><div class="line">-u 搜索默认路径下除可执行文件、源代码文件、帮助文件以外的其它文件。</div><div class="line"></div><div class="line">-B 指定搜索可执行文件的路径。</div><div class="line"></div><div class="line">-M 指定搜索帮助文件的路径。</div><div class="line"></div><div class="line">-S 指定搜索源代码文件的路径。</div></pre></td></tr></table></figure></p>
+<p>示例：</p>
+<p>查找mysql安装目录</p>
+<p>whereis mysql</p>
+<h1 id="ls命令"><a href="#ls命令" class="headerlink" title="ls命令"></a>ls命令</h1><p>ls命令用来查看目标目录中所有的子目录和文件信息。</p>
+<p>格式：</p>
+<p>ls 参数 目录名</p>
+<p>参数：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div></pre></td><td class="code"><pre><div class="line">-a, –all 列出目录下的所有文件，包括以 . 开头的隐含文件</div><div class="line"></div><div class="line">-A 同-a，但不列出“.”(表示当前目录)和“..”(表示当前目录的父目录)。</div><div class="line"></div><div class="line">-c 配合 -lt：根据 ctime 排序及显示 ctime (文件状态最后更改的时间)配合 -l：显示 ctime 但根据名称排序否则：根据 ctime 排序</div><div class="line"></div><div class="line">-C 每栏由上至下列出项目</div><div class="line"></div><div class="line">–color[=WHEN] 控制是否使用色彩分辨文件。WHEN 可以是'never'、'always'或'auto'其中之一</div><div class="line"></div><div class="line">-d, –directory 将目录象文件一样显示，而不是显示其下的文件。</div><div class="line"></div><div class="line">-D, –dired 产生适合 Emacs 的 dired 模式使用的结果</div><div class="line"></div><div class="line">-f 对输出的文件不进行排序，-aU 选项生效，-lst 选项失效</div><div class="line"></div><div class="line">-g 类似 -l,但不列出所有者</div><div class="line"></div><div class="line">-G, –no-group 不列出任何有关组的信息</div><div class="line"></div><div class="line">-h, –human-readable 以容易理解的格式列出文件大小 (例如 1K 234M 2G)</div><div class="line"></div><div class="line">–si 类似 -h,但文件大小取 1000 的次方而不是 1024</div><div class="line"></div><div class="line">-H, –dereference-command-line 使用命令列中的符号链接指示的真正目的地</div><div class="line"></div><div class="line">–indicator-style=方式 指定在每个项目名称后加上指示符号<span class="tag">&lt;<span class="name">方式</span>&gt;</span>：none (默认)，classify (-F)，file-type (-p)</div><div class="line"></div><div class="line">-i, –inode 印出每个文件的 inode 号</div><div class="line"></div><div class="line">-I, –ignore=样式 不印出任何符合 shell 万用字符<span class="tag">&lt;<span class="name">样式</span>&gt;</span>的项目</div><div class="line"></div><div class="line">-k 即 –block-size=1K,以 k 字节的形式表示文件的大小。</div><div class="line"></div><div class="line">-l 除了文件名之外，还将文件的权限、所有者、文件大小等信息详细列出来。</div><div class="line"></div><div class="line">-L, –dereference 当显示符号链接的文件信息时，显示符号链接所指示的对象而并非符号链接本身的信息</div><div class="line"></div><div class="line">-m 所有项目以逗号分隔，并填满整行行宽</div><div class="line"></div><div class="line">-o 类似 -l,显示文件的除组信息外的详细信息。</div><div class="line"></div><div class="line">-r, –reverse 依相反次序排列</div><div class="line"></div><div class="line">-R, –recursive 同时列出所有子目录层</div><div class="line"></div><div class="line">-s, –size 以块大小为单位列出所有文件的大小</div><div class="line"></div><div class="line">-S 根据文件大小排序</div><div class="line"></div><div class="line">–sort=WORD 以下是可选用的 WORD 和它们代表的相应选项：</div><div class="line"></div><div class="line">extension -X status -c</div><div class="line"></div><div class="line">none -U time -t</div><div class="line"></div><div class="line">size -S atime -u</div><div class="line"></div><div class="line">time -t access -u</div><div class="line"></div><div class="line">version -v use -u</div><div class="line"></div><div class="line">-t 以文件修改时间排序</div><div class="line"></div><div class="line">-u 配合 -lt:显示访问时间而且依访问时间排序</div><div class="line"></div><div class="line">配合 -l:显示访问时间但根据名称排序</div><div class="line"></div><div class="line">否则：根据访问时间排序</div><div class="line"></div><div class="line">-U 不进行排序;依文件系统原有的次序列出项目</div><div class="line"></div><div class="line">-v 根据版本进行排序</div><div class="line"></div><div class="line">-w, –width=COLS 自行指定屏幕宽度而不使用目前的数值</div><div class="line"></div><div class="line">-x 逐行列出项目而不是逐栏列出</div><div class="line"></div><div class="line">-X 根据扩展名排序</div><div class="line"></div><div class="line">-1 每行只列出一个文件</div><div class="line"></div><div class="line">–help 显示此帮助信息并离开</div><div class="line"></div><div class="line">–version 显示版本信息并离开</div></pre></td></tr></table></figure></p>
+<p>示例：</p>
+<p>显示当前目录下所有文件和子目录（包括隐藏文件和隐藏目录）的详细信息</p>
+<p>ls -a -l</p>
+<p>显示”/data/www/project”目录下所有文件和子目录（不包括隐藏文件和隐藏目录）的详细信息</p>
+<p>ls -l /data/www/project</p>
+<p>显示”/data/www/project”目录下所有文件和子目录（包括隐藏文件和隐藏目录）的名称</p>
+<p>ls -a /data/www/project</p>
+<h1 id="sudo命令"><a href="#sudo命令" class="headerlink" title="sudo命令"></a>sudo命令</h1><p>sudo命令是个管理员分配给一些linux用户执行一些没有权限的命令。</p>
+<p>如果发现执行linux命令提示没有权限什么balabala的，不管什么命令，前面先加上sudo试试。</p>
+<p>格式：无需了解</p>
+<p>参数：无需了解</p>
+<p>示例：</p>
+<p>sudo yum install xxxx</p>
+<p>sudo svn up xxxx</p>
+<p>sudo rm -r xxxx</p>
+<h1 id="tail命令"><a href="#tail命令" class="headerlink" title="tail命令"></a>tail命令</h1><p>tail命令用于显示指定文件的末尾内容，并且使用-f参数可以查看即时的文件内容，常用查看日志文件。</p>
+<p>格式：</p>
+<p>tail 参数 文件</p>
+<p>参数：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">-f 循环读取</div><div class="line"></div><div class="line">-q 不显示处理信息</div><div class="line"></div><div class="line">-v 显示详细的处理信息</div><div class="line"></div><div class="line">-c<span class="tag">&lt;<span class="name">数目</span>&gt;</span> 显示的字节数</div><div class="line"></div><div class="line">-n<span class="tag">&lt;<span class="name">行数</span>&gt;</span> 显示行数</div><div class="line"></div><div class="line">--pid=PID 与-f合用,表示在进程ID,PID死掉之后结束.</div><div class="line"></div><div class="line">-q, --quiet, --silent 从不输出给出文件名的首部</div><div class="line"></div><div class="line">-s, --sleep-interval=S 与-f合用,表示在每次反复的间隔休眠S秒</div></pre></td></tr></table></figure></p>
+<p>示例：</p>
+<p>及时显示/data/www/project目录下log.php文件的末尾内容</p>
+<p>tail -f /data/www/project/log.php</p>
+<p>及时显示/data/www/project目录下log.php文件的500行末尾内容</p>
+<p>tail -f -n 500 /data/www/project/log.php</p>
+<h1 id="cp命令"><a href="#cp命令" class="headerlink" title="cp命令"></a>cp命令</h1><p>cp命令用于复制文件或目录。</p>
+<p>格式：</p>
+<p>cp 参数 原文件或原目录 目标文件或目录</p>
+<p>参数：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">-a或--archive 等于-dR或-dpR</div><div class="line"></div><div class="line">--backup 为每个已存在的目标文件创建备份</div><div class="line"></div><div class="line">-b 类似--backup但不接受参数</div><div class="line"></div><div class="line">--copy-contents 在递归处理是复制特殊文件内容</div><div class="line"></div><div class="line">-d或--no-dereference或--preserve=links 若源文件为连接文件属性，则复制连接文件指向的文件而非复制文件本身</div><div class="line"></div><div class="line">-s或--symbolic-link 对源文件建立符号链接，而非复制文件</div><div class="line"></div><div class="line">-f或--force 强制操作，如果目标文件无法打开则将其移除并重试(当-n选项存在时则不需再选此项)</div><div class="line"></div><div class="line">-i或--interactive 覆盖前询问(使前面的-n选项失效)</div><div class="line"></div><div class="line">-H 跟随源文件中的命令行符号链接</div><div class="line"></div><div class="line">-l或--link 链接文件而不复制</div><div class="line"></div><div class="line">-L或--dereference 总是跟随符号链接</div><div class="line"></div><div class="line">-n或--no-clobber 不要覆盖已存在的文件(使前面的-i选项失效)</div><div class="line"></div><div class="line">-P或----parents 保留源文件或目录的路径，此路径可以是绝对路径或相对路径，且目的目录必须已经存在</div><div class="line"></div><div class="line">-p等于--preserve 保留源文件或目录的属性，包括所有者、所属组、权限与时间</div><div class="line"></div><div class="line">--preserve[=属性列表 保持指定的属性(默认：模式,所有权,时间戳)，如果可能保持附加属性：环境、链接等</div><div class="line"></div><div class="line">-R或-r或--recursive 递归处理，复制目录及目录内的所有项目</div><div class="line"></div><div class="line">-u或--update 使用这项参数之后，只会在源文件的修改时间(Modification Time)较目的文件更新时，或是名称相互对应的目的文件并不存在，才复制文件</div><div class="line"></div><div class="line">-v或--verbose 显示执行过程</div><div class="line"></div><div class="line">-x或--one-file-system 复制的文件或目录存放的文件系统，必须与cp指令执行时所处的文件系统相同，否则不复制，亦不处理位于其他分区的文件</div></pre></td></tr></table></figure></p>
+<p>示例：</p>
+<p>强行复制文件index.html到目录/data/www/project</p>
+<p>cp -f -v /home/usr/download/index.html /data/www/project</p>
+<p>同：cp -fv /home/usr/download/index.html /data/www/project</p>
+<h1 id="rm命令"><a href="#rm命令" class="headerlink" title="rm命令"></a>rm命令</h1><p>rm命令和cp命令类似。</p>
+<p>示例：</p>
+<p>删除download目录</p>
+<p>rm -rf /home/usr/download</p>
+<p>删除download目录下的所有文件和子目录，但保留download目录</p>
+<p>rm -rf /home/usr/download/*</p>
+<h1 id="mv命令"><a href="#mv命令" class="headerlink" title="mv命令"></a>mv命令</h1><p>mv命令和cp命令类似。</p>
+<p>示例：</p>
+<p>移动download目录中的所有子目录和文件到/data/www/project 目录，但保留download目录</p>
+<p>mv -rf /home/usr/download/* /data/www/project</p>
+<h1 id="rpm命令"><a href="#rpm命令" class="headerlink" title="rpm命令"></a>rpm命令</h1><p>rpm是RedHat Package Manager（RedHat软件包管理工具）的简称。</p>
+<p>.rpm执行安装包分为二进制包（Binary）以及源代码包（Source）两种，二进制包可以直接安装在计算机中，而源代码包将会由RPM自动编译、安装。源代码包经常以src.rpm作为后缀名。</p>
+<p>常用参数：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">－ivh：安装显示安装进度–install–verbose–hash</div><div class="line"></div><div class="line">－Uvh：升级软件包–Update；</div><div class="line"></div><div class="line">－qpl：列出RPM软件包内的文件信息[Query Package list]；</div><div class="line"></div><div class="line">－qpi：列出RPM软件包的描述信息[Query Package install package(s)]；</div><div class="line"></div><div class="line">－qf：查找指定文件属于哪个RPM软件包[Query File]；</div><div class="line"></div><div class="line">－Va：校验所有的RPM软件包，查找丢失的文件[View Lost]；</div><div class="line"></div><div class="line">－e：删除包</div><div class="line"></div><div class="line">-q samba ：查询程序是否安装</div></pre></td></tr></table></figure></p>
+<p>常用命令：</p>
+<p>install/upgrade/remove：安装/更新/卸载</p>
+<h1 id="yum命令"><a href="#yum命令" class="headerlink" title="yum命令"></a>yum命令</h1><p>Yum（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及CentOS中的Shell前端软件包管理器。基于RPM包管理，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装。</p>
+<p>常用参数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">-e 静默执行</div><div class="line"></div><div class="line">-t 忽略错误</div><div class="line"></div><div class="line">-R[分钟] 设置等待时间</div><div class="line"></div><div class="line">-y 自动应答yes</div><div class="line"></div><div class="line">–skip-broken 忽略依赖问题</div><div class="line"></div><div class="line">–nogpgcheck 忽略GPG验证</div></pre></td></tr></table></figure></p>
+<h1 id="全部命令："><a href="#全部命令：" class="headerlink" title="全部命令："></a>全部命令：</h1><p>check-update 检查可更新的包</p>
+<p>clearn 清除全部</p>
+<p>clean packages 清除临时包文件（/var/cache/yum 下文件）</p>
+<p>clearn headers 清除rpm头文件</p>
+<p>clean oldheaders 清除旧的rpm头文件</p>
+<p>deplist 列出包的依赖</p>
+<p>list 可安装和可更新的RPM包</p>
+<p>list installed 已安装的包</p>
+<p>list extras 已安装且不在资源库的包</p>
+<p>info 可安装和可更新的RPM包 信息</p>
+<p>info installed 已安装包的信息(-qa 参数相似)</p>
+<p>install[RPM包] 安装包</p>
+<p>localinstall 安装本地的 RPM包</p>
+<p>update[RPM包] 更新包</p>
+<p>upgrade 升级系统</p>
+<p>search[关键词] 搜索包</p>
+<p>provides[关键词] 搜索特定包文件名</p>
+<p>reinstall[RPM包] 重新安装包</p>
+<p>repolist 显示资源库的配置</p>
+<p>resolvedep 指定依赖</p>
+<p>remove[RPM包] 卸载包</p>
+<p>如果要安装指定版本或指定插件，则需要详细文件名称：</p>
+<p>[zhichao@localhost ~]$ sudo yum list java*</p>
+<p>java-1.8.0-openjdk.x86_64 1:1.8.0.45-36.b13.fc22 @System</p>
+<p>java-1.8.0-openjdk-devel.x86_64 1:1.8.0.45-36.b13.fc22 @System</p>
+<p>java-1.8.0-openjdk-headless.x86_64 1:1.8.0.45-36.b13.fc22 @System</p>
+<p>sudo yum install java-1.8.0-openjdk-devel.x86_64</p>
+<p>apt-get命令</p>
+<p>apt-get（全称Advanced Package Tool）的作用同于yum，不过使用该命令的操作系统为Ubuntu和Debian。</p>
+<p>经过修改后可以使用apt-rpm处理红帽的Package Manager（RPM）文件。</p>
+<p>常用命令：</p>
+<p>apt-get install packagename</p>
+<p>安装一个新软件包</p>
+<p>apt-get remove packagename</p>
+<p>卸载一个已安装的软件包（保留配置文档）</p>
+<p>apt-get remove –purge packagename</p>
+<p>卸载一个已安装的软件包（删除配置文档）</p>
+<p>apt-get autoremove packagename</p>
+<p>删除包及其依赖的软件包</p>
+<p>apt-get autoremove –purge packagname</p>
+<p>删除包及其依赖的软件包+配置文件，比上面的要删除的彻底一点</p>
+<p>dpkg –force-all –purge packagename</p>
+<p>有些软件很难卸载，而且还阻止了别的软件的应用，就能够用这个，但是有点冒险。</p>
+<p>dnf命令</p>
+<p>dnf是fedora22新的用于替换yum和rpm的命令。</p>
+<p>在使用yum时，会提示过时，但仍然可用。</p>
+<p>详细了解请看一下这篇文章：<a href="http://www.linuxidc.com/Linux/2015-06/118751.htm" target="_blank" rel="external">http://www.linuxidc.com/Linux/2015-06/118751.htm</a></p>
+<p>。</p>
+<p>systemctl命令</p>
+<p>在cenos7和fedora22中，systemctl替换了service命令。</p>
+<p>写法从以前的：service start mysqld</p>
+<p>变成了：systemctl start mysqld.service</p>
+<p>详细了解请看一下这篇文章：<a href="http://www.linuxidc.com/Linux/2015-07/120833.htm" target="_blank" rel="external">http://www.linuxidc.com/Linux/2015-07/120833.htm</a></p>
+<p>。</p>
+<p>或者：</p>
+<p><a href="https://wiki.archlinux.org/index.php/Systemd_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87" target="_blank" rel="external">https://wiki.archlinux.org/index.php/Systemd_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87</a>)</p>
+<p>pwd命令</p>
+<p>pwd命令可以获取当前目录的全路径。</p>
+<p>示例：</p>
+<p>$ pwd</p>
+<p>/home/zhichao/下载</p>
+<h1 id="终端下的快捷键"><a href="#终端下的快捷键" class="headerlink" title="终端下的快捷键"></a>终端下的快捷键</h1><p>Ctrl+a：光标回到命令行首。 （a：ahead）﻿</p>
+<p>Ctrl+e：光标回到命令行尾。 （e：end）</p>
+<p>Ctrl+b：光标向行首移动一个字符。 （b：backwards）</p>
+<p>Ctrl+f：光标向行尾移动一个字符。 （f：forwards）</p>
+<p>Ctrl+w: 删除光标处到行首的字符。</p>
+<p>Ctrl+k：删除光标处到行尾的字符。</p>
+<p>Ctrl+u：删除整个命令行文本字符。</p>
+<p>Ctrl+h：向行首删除一个字符。</p>
+<p>Ctrl+d：向行尾删除一个字符。</p>
+<p>Ctrl+y:：粘贴Ctrl+u，Ctrl+k，Ctrl+w删除的文本。</p>
+<p>Ctrl+p: 上一个使用的历史命令。 （或者直接按向上方向键；p：previous）</p>
+<p>Ctrl+n： 下一个使用的历史命令。（或者直接按向下方向键；n：next）</p>
+<p>Ctrl+r：快速检索历史命令。（r：retrieve）。</p>
+<p>Ctrl+t： 交换光标所在字符和其前的字符。</p>
+<p>Ctrl+i：相当于Tab键。</p>
+<p>Ctrl+o：相当于Ctrl+m.</p>
+<p>Ctrl+m：相当Enter键。</p>
+<h1 id="其他控制键："><a href="#其他控制键：" class="headerlink" title="其他控制键："></a>其他控制键：</h1><p>Ctrl+s:使终端发呆，静止，可以使快速输出的终端屏幕停下来。</p>
+<p>Ctrl+q：退出Ctrl+s引起的发呆。</p>
+<p>Ctrl+z：使正在运行在终端的任务，运行于后台。 （可用fg恢复）</p>
+<p>Ctrl+c：中断终端中正在执行的任务。</p>
+<p>Ctrl+d: 在空命令行的情况下可以退出终端。</p>
+<p>Ctrl+[ ：相当于Esc键。</p>
+<p>Esc键：连续按3次显示所有的支持的终端命令。</p>
+<p>Tab键：命令、文件名等自动补全命令或目录、文件名。</p>
+<p>alt+/：同Tab键</p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://yoursite.com/2016/12/11/ubuntu常用命令及部分快捷键/" data-id="cj1s0lcbx000je3pv8gw6gssf" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://yoursite.com/2016/12/11/ubuntu常用命令及部分快捷键/#comments" id="sourceId::2016/12/11/ubuntu常用命令及部分快捷键/" class="article-comment-link cy_cmt_count">评论</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/10/31/ubuntu下编程环境的搭建/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    ubuntu下编程环境的搭建
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2016/12/11/ubuntu安装及初始化/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">ubuntu安装及初始化</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div id="SOHUCS" sid="2016/12/11/ubuntu常用命令及部分快捷键/"></div>
+
+    
+    </section>
+
+</section>
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/04/14/CentOs服务器常用命令/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Linux/">Linux</a></p>
+                            <p class="item-title"><a href="/2017/04/14/CentOs服务器常用命令/" class="title">Centos服务器常用命令</a></p>
+                            <p class="item-date"><time datetime="2017-04-14T07:23:00.000Z" itemprop="datePublished">2017-04-14</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/02/17/反射机制动态生成sql语句/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Java/">Java</a></p>
+                            <p class="item-title"><a href="/2017/02/17/反射机制动态生成sql语句/" class="title">反射机制动态生成sql语句</a></p>
+                            <p class="item-date"><time datetime="2017-02-17T04:40:00.000Z" itemprop="datePublished">2017-02-17</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/02/11/jsp动态创建mysql数据表/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/JavaEE/">JavaEE</a></p>
+                            <p class="item-title"><a href="/2017/02/11/jsp动态创建mysql数据表/" class="title">jsp动态创建mysql数据表</a></p>
+                            <p class="item-date"><time datetime="2017-02-10T16:00:00.000Z" itemprop="datePublished">2017-02-11</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/02/11/解决表单post传递乱码/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/JavaEE/">JavaEE</a></p>
+                            <p class="item-title"><a href="/2017/02/11/解决表单post传递乱码/" class="title">解决表单post传递乱码</a></p>
+                            <p class="item-date"><time datetime="2017-02-10T16:00:00.000Z" itemprop="datePublished">2017-02-11</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/01/03/系统安装之路三电脑无法启动/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/other/">other</a></p>
+                            <p class="item-title"><a href="/2017/01/03/系统安装之路三电脑无法启动/" class="title">系统安装之路三电脑无法启动</a></p>
+                            <p class="item-date"><time datetime="2017-01-03T06:00:00.000Z" itemprop="datePublished">2017-01-03</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaEE/">JavaEE</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/other/">other</a><span class="category-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">标签</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Centos/">Centos</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/">code</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hardware/">hardware</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jsp/">jsp</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note/">note</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a><span class="tag-list-count">4</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Centos/" style="font-size: 10px;">Centos</a> <a href="/tags/code/" style="font-size: 10px;">code</a> <a href="/tags/hardware/" style="font-size: 15px;">hardware</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/jsp/" style="font-size: 20px;">jsp</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/note/" style="font-size: 10px;">note</a> <a href="/tags/ubuntu/" style="font-size: 20px;">ubuntu</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://www.jianshu.com/u/f86b4bb07167">简书</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2017 look<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cysXuHckG"></script>
+    <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
+    <script type="text/javascript">
+    window.changyan.api.config({
+    appid: 'cysXuHckG',
+    conf: 'prod_0d0c43f5592ea4cda878657ea0d0f798'
+    });
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

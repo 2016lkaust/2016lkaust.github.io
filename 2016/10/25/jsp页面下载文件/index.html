@@ -3,17 +3,22 @@
 <head>
     <meta charset="utf-8">
     
-    <title>归档 | look的博客</title>
+    <title>jsp页面下载文件 | look的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="师傅领进门，修行在个人">
-<meta property="og:type" content="website">
-<meta property="og:title" content="look的博客">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+    <meta name="description" content="目标：将文件放在某路径下（如D:/src.zip），在网页中点击超链接下载文件。">
+<meta name="keywords" content="jsp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jsp页面下载文件">
+<meta property="og:url" content="http://yoursite.com/2016/10/25/jsp页面下载文件/index.html">
 <meta property="og:site_name" content="look的博客">
-<meta property="og:description" content="师傅领进门，修行在个人">
+<meta property="og:description" content="目标：将文件放在某路径下（如D:/src.zip），在网页中点击超链接下载文件。">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1837782-732ba175902294f2.gif?imageMogr2/auto-orient/strip">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1837782-9b514b5f7e9af8de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-04-22T01:25:16.454Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="look的博客">
-<meta name="twitter:description" content="师傅领进门，修行在个人">
+<meta name="twitter:title" content="jsp页面下载文件">
+<meta name="twitter:description" content="目标：将文件放在某路径下（如D:/src.zip），在网页中点击超链接下载文件。">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1837782-732ba175902294f2.gif?imageMogr2/auto-orient/strip">
     
 
     
@@ -170,61 +175,21 @@ var _hmt = _hmt || [];
 </aside>
 
             
-            <section id="main"><div class="timeline timeline-wrap">
-    
-            <div class="timeline-row timeline-row-major">
-                <span class="node"><i class="fa fa-calendar"></i></span>
-                <h1 class="title">2016</h1>
-            </div>
+            <section id="main"><article id="post-jsp页面下载文件" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+        
+            <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2016/10/31/ubuntu下编程环境的搭建/">ubuntu下编程环境的搭建</a>
+        <h1 class="article-title" itemprop="name">
+            jsp页面下载文件
         </h1>
     
 
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2016/10/31/ubuntu下编程环境的搭建/">
-            <time datetime="2016-10-31T13:00:00.000Z" itemprop="datePublished">2016-10-31</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Linux/">Linux</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/ubuntu/">ubuntu</a>
-    </div>
-
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
                 
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2016/10/25/jsp页面下载文件/">jsp页面下载文件</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
+                    <div class="article-meta">
+                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
         <a href="/2016/10/25/jsp页面下载文件/">
@@ -233,63 +198,185 @@ var _hmt = _hmt || [];
     </div>
 
 
-                    
+                        
     <div class="article-category">
     	<i class="fa fa-folder"></i>
         <a class="article-category-link" href="/categories/JavaEE/">JavaEE</a>
     </div>
 
-                    
+                        
     <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link" href="/tags/jsp/">jsp</a>
     </div>
 
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+                    </div>
                 
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2016/10/08/jsp传参方法小结/">jsp传参方法小结</a>
-        </h1>
-    
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>目标：将文件放在某路径下（如D:/src.zip），在网页中点击超链接下载文件。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1837782-732ba175902294f2.gif?imageMogr2/auto-orient/strip" alt="演示.gif"><br><a id="more"></a><br>准备文件：</p>
+<blockquote>
+<p>1、index.jsp<br>2、download.jsp<br>3、待下载文件：“src.zip”(路径为D:/src.zip)<br>4、程序结构<br><img src="http://upload-images.jianshu.io/upload_images/1837782-9b514b5f7e9af8de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="程序结构.png"></p>
+</blockquote>
+<ul>
+<li><code>index.jsp</code></li>
+</ul>
+<pre><code> &lt;%@ page language=&quot;java&quot; import=&quot;java.util.*&quot; pageEncoding=&quot;UTF-8&quot;%&gt;
 
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2016/10/08/jsp传参方法小结/">
-            <time datetime="2016-10-08T12:10:00.000Z" itemprop="datePublished">2016-10-08</time>
-        </a>
-    </div>
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+  &lt;head&gt;
+          &lt;title&gt;首页&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+          &lt;a href=&quot;download.jsp&quot;&gt;点击下载&lt;/a&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><ul>
+<li><code>download.jsp</code></li>
+</ul>
+<pre><code>&lt;%@page language=&quot;java&quot; contentType=&quot;application/x-msdownload&quot;
+    pageEncoding=&quot;gb2312&quot;%&gt;
+&lt;%
+    String filename = &quot;src.zip&quot;;
+    String filepath = &quot;D:&quot;;
+    response.setContentType(&quot;APPLICATION/OCTET-STREAM&quot;);
+    response.setHeader(&quot;Content-Disposition&quot;, &quot;attachment; filename=\&quot;&quot;
+            + filename + &quot;\&quot;&quot;);
 
+    java.io.FileInputStream fileInputStream = new java.io.FileInputStream(
+            filepath + filename);
 
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Java/">Java</a>
-    </div>
+    int i;
+    while ((i = fileInputStream.read()) != -1) {
+        out.write(i);
+    }
+    fileInputStream.close();
+%&gt;
+</code></pre><p>注：index.jsp文件很灵活，超链接可以替换为按钮等等；待下载文件可以多样化，压缩包、jsp文件、图片等等各种文件都可以。</p>
 
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/jsp/">jsp</a>
-    </div>
-
-                </div>
-            </div>
+        
         </div>
-    
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
 </div>
 
-    <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/archives/">&laquo; 上一页</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-    </nav>
+    <a data-url="http://yoursite.com/2016/10/25/jsp页面下载文件/" data-id="cj1s0lcb30009e3pv7212y47b" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://yoursite.com/2016/10/25/jsp页面下载文件/#comments" id="sourceId::2016/10/25/jsp页面下载文件/" class="article-comment-link cy_cmt_count">评论</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/10/08/jsp传参方法小结/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    jsp传参方法小结
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2016/10/31/ubuntu下编程环境的搭建/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">ubuntu下编程环境的搭建</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div id="SOHUCS" sid="2016/10/25/jsp页面下载文件/"></div>
+
+    
+    </section>
+
 </section>
             
                 <aside id="sidebar">

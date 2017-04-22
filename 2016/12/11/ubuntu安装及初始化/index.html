@@ -3,17 +3,21 @@
 <head>
     <meta charset="utf-8">
     
-    <title>归档 | look的博客</title>
+    <title>ubuntu安装及初始化 | look的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="师傅领进门，修行在个人">
-<meta property="og:type" content="website">
-<meta property="og:title" content="look的博客">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+    <meta name="description" content="参考文章Ubuntu 16.04 U盘安装图文教程  问题">
+<meta name="keywords" content="ubuntu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ubuntu安装及初始化">
+<meta property="og:url" content="http://yoursite.com/2016/12/11/ubuntu安装及初始化/index.html">
 <meta property="og:site_name" content="look的博客">
-<meta property="og:description" content="师傅领进门，修行在个人">
+<meta property="og:description" content="参考文章Ubuntu 16.04 U盘安装图文教程  问题">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1837782-2729c17d5a1914d9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-04-22T01:20:32.743Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="look的博客">
-<meta name="twitter:description" content="师傅领进门，修行在个人">
+<meta name="twitter:title" content="ubuntu安装及初始化">
+<meta name="twitter:description" content="参考文章Ubuntu 16.04 U盘安装图文教程  问题">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1837782-2729c17d5a1914d9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
     
 
     
@@ -170,126 +174,221 @@ var _hmt = _hmt || [];
 </aside>
 
             
-            <section id="main"><div class="timeline timeline-wrap">
-    
-            <div class="timeline-row timeline-row-major">
-                <span class="node"><i class="fa fa-calendar"></i></span>
-                <h1 class="title">2016</h1>
-            </div>
+            <section id="main"><article id="post-ubuntu安装及初始化" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+        
+            <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2016/10/31/ubuntu下编程环境的搭建/">ubuntu下编程环境的搭建</a>
+        <h1 class="article-title" itemprop="name">
+            ubuntu安装及初始化
         </h1>
     
 
-                <div class="article-meta">
-                    
+                
+                    <div class="article-meta">
+                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2016/10/31/ubuntu下编程环境的搭建/">
-            <time datetime="2016-10-31T13:00:00.000Z" itemprop="datePublished">2016-10-31</time>
+        <a href="/2016/12/11/ubuntu安装及初始化/">
+            <time datetime="2016-12-11T05:35:00.000Z" itemprop="datePublished">2016-12-11</time>
         </a>
     </div>
 
 
-                    
+                        
     <div class="article-category">
     	<i class="fa fa-folder"></i>
         <a class="article-category-link" href="/categories/Linux/">Linux</a>
     </div>
 
-                    
+                        
     <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link" href="/tags/ubuntu/">ubuntu</a>
     </div>
 
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+                    </div>
                 
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2016/10/25/jsp页面下载文件/">jsp页面下载文件</a>
-        </h1>
-    
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>参考文章<a href="http://www.linuxidc.com/Linux/2016-04/130520.htm" target="_blank" rel="external">Ubuntu 16.04 U盘安装图文教程</a></p>
+<ul>
+<li>问题</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1837782-2729c17d5a1914d9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图1.jpg"><br><a id="more"></a><br>按照以上文章结束时，我的电脑提示<code>无法将grub-efi-amd64-signed安装到/target/</code>，重装好多次都是卡在这一步。<br>解决<br>之前的步骤中电脑会提示电脑是以UEFI启动什么的，不选在UEFI模式中运行，选择后退一项，也能正常安装。（当时没有截图，现在记不清了）</p>
+<ul>
+<li>后续<br>1.创建root用户<blockquote>
+<p>sudo passwd</p>
+</blockquote>
+</li>
+</ul>
+<ol>
+<li>更新系统<blockquote>
+<p>sudo apt update<br>sudo apt dist-upgrade</p>
+</blockquote>
+</li>
+</ol>
+<p>3.配置输入法快捷键<br>4.设置<code>系统设置-键盘-快捷键-启动器-启动终端</code>快捷键为<code>super+R</code><br>5.安装vim</p>
+<blockquote>
+<p>sudo apt install vim</p>
+</blockquote>
+<p>配置</p>
+<blockquote>
+<p>sudo vim /etc/vim/vimrc</p>
+</blockquote>
+<p>插入(用jk代替Esc退出编辑模式)</p>
+<blockquote>
+<p>:imap jk <esc> </esc></p>
+</blockquote>
+<p>6.将文件夹改为英文路径<br>首先修改现有主文件夹下各文件夹名称：<br>desktop、 documents、 download、 music、 pictures、 public、  video ……<br>然后编辑配置文件：</p>
+<blockquote>
+<p>gedit ~/.config/user-dirs.dirs</p>
+</blockquote>
+<p>把文件夹指向改掉，例如：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">XDG_DESKTOP_DIR="$HOME/desktop"</div><div class="line">XDG_DOWNLOAD_DIR="$HOME/download"</div><div class="line">XDG_PUBLICSHARE_DIR="$HOME/public"</div><div class="line">XDG_DOCUMENTS_DIR="$HOME/documents"</div><div class="line">XDG_MUSIC_DIR="$HOME/music"</div><div class="line">XDG_PICTURES_DIR="$HOME/pictures"</div><div class="line">XDG_VIDEOS_DIR="$HOME/video"</div></pre></td></tr></table></figure></p>
+<p>7.在系统启动界面，Win8.1系统处于最后一项，如果需要让Win8.1处于第一项，可以这样设置：</p>
+<p>1、进入Ubuntu系统。</p>
+<p>2、Ctrl+Alt+T打开终端，输入“sudo nautilus”，以root权限打开资源管理器。</p>
+<p>3、找到“计算机/etc/grub.d/30_os-prober”文件，将其名称修改为“06_os-prober”即可：</p>
+<p>8.ubuntu16.04的软件中心应该是有bug，安装不了第三方.deb文件，我们只有使用dpkg -i 或者gdebi的方式安装，我使用的是后者，因为后者功能更加强大。要使用gdebi命令先要安装它：</p>
+<blockquote>
+<p>sudo apt install gdebi-core</p>
+</blockquote>
+<p>然后就可以安装.deb文件了。安装过程如下：先切换到你下载的lantern的安装文件目录下，直接使用：</p>
+<blockquote>
+<p>sudo gdebi xxxxxx.deb</p>
+</blockquote>
+<p>9.安装git</p>
+<blockquote>
+<p>sudo apt-get install git</p>
+</blockquote>
+<p>10.安装lantern</p>
+<blockquote>
+<p>git clone <a href="https://github.com/getlantern/lantern.git" target="_blank" rel="external">https://github.com/getlantern/lantern.git</a><br>cd lantern<br>make lantern<br>./lantern</p>
+</blockquote>
 
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2016/10/25/jsp页面下载文件/">
-            <time datetime="2016-10-25T11:40:00.000Z" itemprop="datePublished">2016-10-25</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/JavaEE/">JavaEE</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/jsp/">jsp</a>
-    </div>
-
-                </div>
-            </div>
+        
         </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2016/10/08/jsp传参方法小结/">jsp传参方法小结</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2016/10/08/jsp传参方法小结/">
-            <time datetime="2016-10-08T12:10:00.000Z" itemprop="datePublished">2016-10-08</time>
-        </a>
-    </div>
+        <footer class="article-footer">
+            <div class="share-container">
 
 
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Java/">Java</a>
-    </div>
 
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/jsp/">jsp</a>
-    </div>
-
-                </div>
-            </div>
-        </div>
-    
 </div>
 
-    <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/archives/">&laquo; 上一页</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-    </nav>
+    <a data-url="http://yoursite.com/2016/12/11/ubuntu安装及初始化/" data-id="cj1s0lcbk000fe3pvn2lr9map" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://yoursite.com/2016/12/11/ubuntu安装及初始化/#comments" id="sourceId::2016/12/11/ubuntu安装及初始化/" class="article-comment-link cy_cmt_count">评论</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/12/11/ubuntu常用命令及部分快捷键/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    ubuntu常用命令及部分快捷键
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2016/12/14/ubuntu下php环境搭建/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">ubuntu下php环境搭建</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div id="SOHUCS" sid="2016/12/11/ubuntu安装及初始化/"></div>
+
+    
+    </section>
+
 </section>
             
                 <aside id="sidebar">
