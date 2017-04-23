@@ -229,7 +229,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://yoursite.com/2017/04/14/CentOs服务器常用命令/" data-id="cj1u94wi30007aypv18u5ugpd" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2017/04/14/CentOs服务器常用命令/" data-id="cj1ud87cp0002e5pvbc39fjec" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -360,7 +360,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://yoursite.com/2017/03/25/马士兵struts2视频笔记--第三天/" data-id="cj1u94wjp000yaypv3qdmg3x7" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2017/03/25/马士兵struts2视频笔记--第三天/" data-id="cj1ud87lu001fe5pvb4mde3b5" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -491,7 +491,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://yoursite.com/2017/03/24/马士兵struts2视频笔记--第二天/" data-id="cj1u94wjs0013aypvcvytl0yh" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2017/03/24/马士兵struts2视频笔记--第二天/" data-id="cj1ud87m3001he5pv2y0u5rrt" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -622,7 +622,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://yoursite.com/2017/03/23/马士兵struts2视频笔记--第一天/" data-id="cj1u94wjm000vaypv0y4hm677" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2017/03/23/马士兵struts2视频笔记--第一天/" data-id="cj1ud87lp001ee5pv4x50c29b" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -753,7 +753,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://yoursite.com/2017/02/17/反射机制动态生成sql语句/" data-id="cj1u94wiz000kaypv0md0xhc3" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2017/02/17/反射机制动态生成sql语句/" data-id="cj1ud87m8001le5pvl5zk0s5u" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -884,138 +884,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://yoursite.com/2017/02/15/反射机制--高淇Java视频笔记/" data-id="cj1u94wjb000raypv5vgl1luv" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-jsp动态创建mysql数据表" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/02/11/jsp动态创建mysql数据表/">jsp动态创建mysql数据表</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2017/02/11/jsp动态创建mysql数据表/">
-            <time datetime="2017-02-10T16:00:00.000Z" itemprop="datePublished">2017-02-11</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/JavaEE/">JavaEE</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/code/">code</a>, <a class="tag-link" href="/tags/jsp/">jsp</a>, <a class="tag-link" href="/tags/mysql/">mysql</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><p>以下是我自己想到的实现方法，如果读者有更好的方法实现，恳请指点。<br><img src="http://upload-images.jianshu.io/upload_images/1837782-46aec85362e9486c.gif?imageMogr2/auto-orient/strip" alt="指定.gif"></p></p>
-            <p class="article-more-link">
-                <a href="/2017/02/11/jsp动态创建mysql数据表/#more">查看更多</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://yoursite.com/2017/02/11/jsp动态创建mysql数据表/" data-id="cj1u94wiv000gaypve7e3k6k1" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2017/02/15/反射机制--高淇Java视频笔记/" data-id="cj1ud87kx0019e5pvormdd71a" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1146,7 +1015,138 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://yoursite.com/2017/02/11/解决表单post传递乱码/" data-id="cj1u94wk1001aaypvfr15nm3o" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2017/02/11/解决表单post传递乱码/" data-id="cj1ud87mk001re5pvxzdsk0vl" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-jsp动态创建mysql数据表" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/02/11/jsp动态创建mysql数据表/">jsp动态创建mysql数据表</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2017/02/11/jsp动态创建mysql数据表/">
+            <time datetime="2017-02-10T16:00:00.000Z" itemprop="datePublished">2017-02-11</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/JavaEE/">JavaEE</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/code/">code</a>, <a class="tag-link" href="/tags/jsp/">jsp</a>, <a class="tag-link" href="/tags/mysql/">mysql</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><p>以下是我自己想到的实现方法，如果读者有更好的方法实现，恳请指点。<br><img src="http://upload-images.jianshu.io/upload_images/1837782-46aec85362e9486c.gif?imageMogr2/auto-orient/strip" alt="指定.gif"></p></p>
+            <p class="article-more-link">
+                <a href="/2017/02/11/jsp动态创建mysql数据表/#more">查看更多</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://yoursite.com/2017/02/11/jsp动态创建mysql数据表/" data-id="cj1ud87ew000de5pvrimaglp4" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1278,7 +1278,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://yoursite.com/2017/01/03/系统安装之路三电脑无法启动/" data-id="cj1u94wj2000laypvlj1glmor" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2017/01/03/系统安装之路三电脑无法启动/" data-id="cj1ud87qq0027e5pvhseg9v1m" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1409,7 +1409,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://yoursite.com/2017/01/02/系统安装之路二电脑能启动/" data-id="cj1u94wj8000paypvb6somw17" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2017/01/02/系统安装之路二电脑能启动/" data-id="cj1ud87k90016e5pvwfu36tc5" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
